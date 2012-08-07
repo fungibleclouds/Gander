@@ -45,7 +45,6 @@ header {
 
 #sign-up-small, #log-in-small {
   color: white;  
-  padding: 0.2em;
   padding: 5px 7px;
 }
 
@@ -104,7 +103,6 @@ h2 {
   color: white;
   width: 93%;  
   text-decoration:none;
-  line-height: 1em;
   height: 1em;
   text-align: center;
   margin-top: 0.3em;
