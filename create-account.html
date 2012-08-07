@@ -2,7 +2,7 @@
 <html>
   <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
-    <title>Gander</title>
+    <title>Gander - Create Account</title>
    <link href='http://fonts.googleapis.com/css?family=Lato|Courgette' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
@@ -17,27 +17,43 @@
       </header>
 
       <h2>
-        Welcome Aboard!
+        Create your Account
       </h2>
 
       <div id='waitlist'>
           <form class="well">
+            <h3 class='form-section-header'>
+              Information for Gander
+            </h3>
+            <label id='mail-label'>First Name</label>
+            <input type="text" class="span3" placeholder="optional">
             <label id='mail-label'>Email</label>
-            <input type="email" class="span3" placeholder="email@company.com">
-            <label id='mail-label'>Username</label>
-            <input type="text" class="span3" placeholder="your username">
-            <label id='mail-label'>Password</label>
-            <input type="password" class="span3" placeholder="your password">
-            <a id='show-screenshots' class='bottom-marker' style='display: none;' href="#">Show Screenshots &gt;&gt;</a>
+            <input type="email" class="span3" placeholder="you@email.com">
+            <label id='mail-label'>Create a Password for Gander</label>
+            <input type="text" class="span3" placeholder="new password">
+             
+            <div class='divider'></div>
+
+            <h3 class='form-section-header'>
+              My Exchange Account
+            </h3>
+            <a id='show-screenshots' class='bottom-marker' style='display: none;' href="#">Show me how to find this &gt;&gt;</a>
             <a class='hide-screenshots top-marker' style='display: none;' href="#">Hide Screenshots &lt;&lt;</a>
             <img id='walkthrough' src="images/Screenshots.png" alt="Walkthrough"></img>
             <a class='hide-screenshots bottom-marker' style='display: none;' href="#">Hide Screenshots &lt;&lt;</a>
+            <label id='mail-label'>Email</label>
+            <input type="email" class="span3" placeholder="email@company.com">
+            <label id='mail-label'>Username</label>
+            <input type="text" class="span3" placeholder="your email username">
+            <label id='mail-label'>Password</label>
+            <input type="password" class="span3" placeholder="your email password">
+
             <label id='mail-label'>Server</label>
             <input type="url" class="span3" placeholder="server.company.com">
             <label id='mail-label'>Domain</label>
             <input type="text" class="span3" placeholder="your domain">
-            <a id='sign-up' class='button' href="#">Get My Email</a>
-            <a class='abort' href="#">Never mind - don't get my email</a>
+            <a id='sign-up' class='button' href="success-signup.html">Create My Account</a>
+            <a class='abort' href="login.html">Never mind - don't create an account</a>
           </form>
       </div>
 
