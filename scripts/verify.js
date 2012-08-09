@@ -11,12 +11,14 @@
       field = _ref[_i];
       if (!$(field).hasClass('optional-field') && !((_ref1 = $(field).val()) != null ? _ref1.length : void 0)) {
         $(field).addClass('error');
+        $(field).prev().addClass('error');
         if (canContinue) {
           locationOfError = $(field).prev()[0].offsetTop;
         }
         canContinue = false;
       } else {
         $(field).removeClass('error');
+        $(field).prev().removeClass('error'); 
       }
     }
     if (!canContinue) {

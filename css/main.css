@@ -177,3 +177,14 @@ input.error {
 input.error:focus {
   border-color: rgb(185, 74, 72); 
 }
+
+.helper-text {
+  display:none;
+}
+
+.error .helper-text {
+  display: block; 
+  font-size: 0.8em;
+  color: rgb(185, 74, 72);
+  margin-left: 1em;
+}
