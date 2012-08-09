@@ -10,7 +10,7 @@ readCookieValue = (name) ->
   for cookie in document.cookie.split(';')
     if cookie?
       [curName, curValue] = cookie.split('=')
-      if curName == name
+      if $.trim(curName) == name
         return curValue
   null
 
