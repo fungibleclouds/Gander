@@ -34,10 +34,23 @@
 
       <div id='waitlist'>
           <form class="well">
-            <label id='mail-label'>Email</label>
-            <input id='email-field' type="email" class="span3" placeholder="you@email.com">
-            <label id='password-label'>Password</label>
-            <input id='password-field' type="password" class="span3" placeholder="your password">
+            <label id='log-in-email-label'>
+              Email
+              <small class='helper-text'>
+                We need this so that you can log in
+              </small>
+            </label>
+            <input id='log-in-email-field' type="email" class="span3" placeholder="you@email.com">
+            <label class='new-account-helper'>
+                New customer? <a href='create-account.html'>Sign up now!</a>
+            </label>
+            <label id='log-in-password-label'>
+              Password
+              <small class='helper-text'>
+                We need this so that you can log in
+              </small>
+            </label>
+            <input id='log-in-password-field' type="password" class="span3" placeholder="your password">
 
             <a id='log-in' class='button' href="../success-login.html">Log In</a>
           </form>

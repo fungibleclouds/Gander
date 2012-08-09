@@ -188,3 +188,14 @@ input.error:focus {
   color: rgb(185, 74, 72);
   margin-left: 1em;
 }
+
+.new-account-helper {
+  display: none;    
+  font-size: 1em;
+  margin-left: 1em;
+  margin-top: -0.5em;
+}
+
+h3 small {
+  display: block;  
+}

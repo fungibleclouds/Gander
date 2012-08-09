@@ -25,32 +25,35 @@
             <h3 class='form-section-header'>
               Information for Gander
             </h3>
-            <label id='mail-label'>First Name</label>
+            <label id='name-label'>First Name</label>
             <input type="text" class="span3 optional-field" placeholder="optional">
-            <label id='mail-label'>Email</label>
-            <input type="email" class="span3" placeholder="you@email.com">
-            <label id='mail-label'>Create a Password for Gander</label>
-            <input type="text" class="span3" placeholder="new password">
+            <label id='new-email-label'>Email</label>
+            <input id='new-email-field' type="email" class="span3" placeholder="you@email.com">
+            <label id='new-password-label'>Create a Password for Gander</label>
+            <input id='new-password-field' type="text" class="span3" placeholder="new password">
              
             <div class='divider'></div>
 
             <h3 class='form-section-header'>
-              My Exchange Account
+              Connect your Email Account
+              <small style='line-height: 1em;'>
+                Connect your existing Outlook/Microsoft Exchange Account to Gander so you can read your email
+              </small>
             </h3>
-            <a id='show-screenshots' class='bottom-marker' style='display: none;' href="#">Show me how to find this &gt;&gt;</a>
+            <a id='show-screenshots' class='bottom-marker' style='display: none;' href="#">Show me how to find this information &gt;&gt;</a>
             <a class='hide-screenshots top-marker' style='display: none;' href="#">Hide Screenshots &lt;&lt;</a>
             <img id='walkthrough' src="../images/Screenshots.png" alt="Walkthrough"></img>
             <a class='hide-screenshots bottom-marker' style='display: none;' href="#">Hide Screenshots &lt;&lt;</a>
-            <label id='mail-label'>Email</label>
+            <label id='ex-email-label'>Email</label>
             <input type="email" class="span3" placeholder="email@company.com">
-            <label id='mail-label'>Username</label>
+            <label id='ex-uname-label'>Username</label>
             <input type="text" class="span3" placeholder="your email username">
-            <label id='mail-label'>Password</label>
+            <label id='ex-password-label'>Password</label>
             <input type="password" class="span3" placeholder="your email password">
 
-            <label id='mail-label'>Server</label>
+            <label id='ex-server-label'>Server</label>
             <input type="url" class="span3" placeholder="server.company.com">
-            <label id='mail-label'>Domain</label>
+            <label id='ex-domain-label'>Domain</label>
             <input type="text" class="span3" placeholder="your domain">
             <a id='sign-up' class='button' href="../success-signup.html">Create My Account</a>
             <a class='abort' href="index.html">Never mind - don't create an account</a>
