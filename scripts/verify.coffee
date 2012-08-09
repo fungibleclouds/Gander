@@ -1,16 +1,17 @@
-saveEmail = (email) ->
+
+saveCookieValue = (name, value) ->
   expiryDate = new Date()
   expiryDate.setMinutes(expiryDate.getMinutes() + 20)
   document.cookie = 
-    'email=' + email + '; ' +
+    name+'=' + value + '; ' +
     'expires=' + expiryDate.toGMTString() + '; path=/'
 
-readEmail = ->
+readCookieValue = (name) ->
   for cookie in document.cookie.split(';')
     if cookie?
-      [name, value] = cookie.split('=')
-      if name == 'email'
-        return value
+      [curName, curValue] = cookie.split('=')
+      if curName == name
+        return curValue
   null
 
 requireFormFill = (e) ->
@@ -32,20 +33,24 @@ requireFormFill = (e) ->
   canContinue
 
 $('#log-in-email-field').blur (e) ->
-  if (not readEmail()) or not (readEmail() == $(this).val()) and $(this).val().length > 0
+  if (not readCookieValue('email')) or not (readCookieValue('email') == $(this).val()) and $(this).val().length > 0
     $('.new-account-helper').css('display', 'block')
 
 $('#log-in-email-field').keypress (e) ->
   setTimeout (->
-    if readEmail() == $('#log-in-email-field').val()
+    saveCookieValue 'email-attempt', $('#log-in-email-field').val() 
+    if readCookieValue('email') == $('#log-in-email-field').val()
       $('.new-account-helper').css('display', 'none')),
     0
 
 $('#sign-up').click (e) ->
   if requireFormFill e
-    saveEmail $('#new-email-field').val()
+    saveCookieValue 'email', $('#new-email-field').val()
 
-    console.log(readEmail())
-    alert readEmail()
+    console.log(readCookieValue('email'))
 
 $('#log-in').click requireFormFill
+
+if (readCookieValue 'email-attempt')?
+  $('#new-email-field').val (readCookieValue 'email-attempt')
+
