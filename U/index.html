@@ -3,9 +3,10 @@
   <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
     <title>Gander - Log In</title>
-   <link href='http://fonts.googleapis.com/css?family=Lato|Courgette' rel='stylesheet' type='text/css'>    
+   <link href='http://fonts.googleapis.com/css?family=Lato|Courgette' rel='stylesheet' type='text/css'>
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
   </head>
 
   <body>
@@ -24,9 +25,9 @@
         <em>Fly</em> through email
       </h2>
 
-      <div id='description'>    
+      <div id='description'>
         <p>
-          Gander is a secure, mobile-friendly 
+          Gander is a secure, mobile-friendly
           way to access and search your email.
         </p>
       </div>
@@ -34,9 +35,9 @@
       <div id='waitlist'>
           <form class="well">
             <label id='mail-label'>Email</label>
-            <input type="email" class="span3" placeholder="you@email.com">
-            <label id='mail-label'>Password</label>
-            <input type="password" class="span3" placeholder="your password">
+            <input id='email-field' type="email" class="span3" placeholder="you@email.com">
+            <label id='password-label'>Password</label>
+            <input id='password-field' type="password" class="span3" placeholder="your password">
 
             <a id='log-in' class='button' href="../success-login.html">Log In</a>
           </form>
@@ -54,5 +55,7 @@
         <li><a href="#">Privacy</a></li>
       </ul>
     </footer>
+
+    <script src="../scripts/verify.js"></script>
   </body>
 </html>
