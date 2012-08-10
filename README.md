@@ -27,4 +27,13 @@ In order to compile coffeescript code to javascript, you will also need a coffee
 Compiling Coffeescript
 -----------------------
 
-* Windows: Open a console (cmd.exe) and type `cd PATH`, where `PATH` is the location of `coffee.exe`. Press enter to navigate to this directory.
+* Windows: Open a console (cmd.exe) and type `cd PATH`, where `PATH` is the location of `coffee.exe`. 
+  Press enter to navigate to this directory. Compile a coffeescript file by typing `coffee.exe -c FILENAME`, 
+  where `FILENAME` includes the path to the file (such as `C:\Users\julianc\Desktop\Gander\scripts\verify.coffee`). Then press enter. A file called `verify.js` will be created.
+
+* Mac: open a terminal window (termianl.app) and type cd `FOLDER`, where `FOLDER` is the location of the coffeescript file you want to compile (for example, `~/Desktop/Gander/scripts`).
+  Press enter to navigate to this folder. Compile a coffeescript file whenever it is updated by typing `coffee -wc FILENAME`, where filename is something like `verify.js`
+
+Running a test Locally on your Computer
+---------------------------------------
+Just open one of the index.html files in a browser like Chrome or Safari.
