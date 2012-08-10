@@ -22,4 +22,9 @@ You will need a web browser, a plaintext editor such as [Sublime Text](http://ww
 and access to a git client ( [Windows](http://windows.github.com/) or [Mac](http://mac.github.com/) ).
 
 In order to compile coffeescript code to javascript, you will also need a coffeescript compiler 
-( [Mac](http://www.blog.bridgeutopiaweb.com/post/how-to-install-coffeescript-on-mac-os-x/) [Windows](http://www.davidarno.org/2012/02/02/beginners-guide-to-using-coffeescript-on-windows-with-node.js/) ).
+( [Mac](http://www.blog.bridgeutopiaweb.com/post/how-to-install-coffeescript-on-mac-os-x/) or [Windows](https://github.com/alisey/CoffeeScript-Compiler-for-Windows/) ).
+
+Compiling Coffeescript
+-----------------------
+
+* Windows: Open a console (cmd.exe) and type `cd PATH`, where `PATH` is the location of `coffee.exe`. Press enter to navigate to this directory.
