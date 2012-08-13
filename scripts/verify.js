@@ -74,6 +74,8 @@
 
   $('#log-in').click(requireFormFill);
 
+  $('#log-in').click(requireFormFill);
+
   if ((readCookieValue('email-attempt')) != null) {
     $('#new-email-field').val(readCookieValue('email-attempt'));
   }

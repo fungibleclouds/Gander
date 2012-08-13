@@ -2,7 +2,7 @@
   font-family: 'Lato', sans-serif;
 }
 
-#sign-up-small, #log-in-small {
+#sign-up-small, #log-in-small, #go-small {
   font-size: 1.1em;
 }
 
@@ -18,12 +18,18 @@ h2 {
   font-size: 1.2em;
 }
 
-#add-to-waitlist, #sign-up, #log-in {
+#add-to-waitlist, #sign-up, #log-in, #go {
   font-size: 1.6em;
 }
 
 footer ul li {
   font-size: 1.1em; 
+}
+
+#checkbox-label {
+  font-size: 0.9em;
+  display: inline-block;
+  margin-bottom: 1em;
 }
 
 header {
@@ -43,13 +49,17 @@ header {
   margin-right: -0.5em;
 }
 
-#sign-up-small, #log-in-small {
+#sign-up-small, #log-in-small, #go-small {
   color: white;  
   padding: 5px 7px;
 }
 
 #log-in-small, #log-in {
   background-color: #383838;
+}
+
+#go-small, #go {
+  background-color: #3B96FF;
 }
 
 #sign-up-small, #sign-up, #add-to-waitlist {
@@ -65,8 +75,8 @@ h2 {
 }
 
 .form-section-header {
-  margin-top: 0em;  
-  margin-bottom: 0.2em;
+  margin-top: -.5em;  
+  margin-bottom: 0.5em;
 }
 
 .divider {
@@ -98,7 +108,7 @@ h2 {
   width: 95%;
 }
 
-#add-to-waitlist, #sign-up, #log-in {
+#add-to-waitlist, #sign-up, #log-in, #go {
   display:block;        
   color: white;
   width: 93%;  
