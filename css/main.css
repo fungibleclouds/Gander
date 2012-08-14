@@ -67,11 +67,11 @@ header {
   background-color: #383838;
 }
 
-#go-small, #go {
+#go-small, #go, #sign-up {
   background-color: #3B96FF;
 }
 
-#sign-up-small, #sign-up, #add-to-waitlist {
+#sign-up-small, #add-to-waitlist {
   background-color: #3bd8ff;
 }
 
