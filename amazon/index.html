@@ -29,20 +29,27 @@
 
       <div id='waitlist'>
           <form class="well">
-            <h3 class='form-section-header' style=text-align:center>
-              Sign Up/Log in
+            <h3 class='form-section-header'>
+              Sign in
             </h3>
             <label id='log-in-email-label'>
-              Work email address
+              What is your work email address?
               <small class='helper-text'>
-                You need your email address to log in
+                We need your email address to sign in
               </small>
             </label>
             <input id='log-in-email-field' type="email" class="span3" placeholder="name@company.com">
             <label id='log-in-password-label'>
-              Password for Gander
+              Do you have a Gander password?
             </label>
-            <input id='log-in-password-field' type="password" class="span3" placeholder="(if you know it)">
+            <input id='has-password-no' type="radio" name="has-password" value="no" />
+            <label id='has-password-label' for='has-password-no'>
+              No, I'm a new user.
+            </label>
+            <br/>
+            <input id='has-password-yes' type="radio" name="has-password" value="yes" />
+              Yes, my password is:
+            <input id='log-in-password-field' type="password" class="span3">
 
             <a id='go' class='button' href="../success-login.html">Go</a>
           </form>

@@ -10,6 +10,15 @@ label {
   font-size: 1.3em;
 }
 
+#log-in-password-label {
+  margin-top: 2em;
+}
+
+#has-password-label {
+  font-size: 1em;
+  display: inline-block;
+}
+
 h2 {
   font-size: 1.6em;
 }
@@ -77,6 +86,7 @@ h2 {
 .form-section-header {
   margin-top: -.5em;  
   margin-bottom: 0.5em;
+  text-align: center;
 }
 
 .divider {
