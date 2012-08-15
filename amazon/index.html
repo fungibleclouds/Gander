@@ -13,7 +13,9 @@
 
   <div id='container'>
       <header>
-        <img id='logo' src="../images/Gander-logo-sm.png" border="0" alt="Gander Logo"></img>
+        <a href="index.html">
+          <img id='logo' src="../images/Gander-logo-sm.png" border="0" alt="Gander Logo"></img>
+        </a>
       </header>
 
       <h2 id='slogan'>
@@ -34,11 +36,11 @@
             </h3>
             <label id='log-in-email-label'>
               What is your work email address?
-              <small class='helper-text'>
+              <small id='small-helper-text' class='helper-text'>
                 Please enter your email address to sign in.
               </small>
             </label>
-            <input id='log-in-email-field' type="email" class="span3" placeholder="email@company.com">
+            <input id='log-in-email-field' type="email" class="span3" placeholder="email@company.com"/>
             <label id='log-in-password-label'>
               Do you have a Gander password?
             </label>
@@ -51,9 +53,9 @@
             <label id='has-password-label' for='has-password-yes'>
               Yes, my password is:
             </label>
-            <input id='log-in-password-field' type="password" class="span3 optional-field" onfocus="selectHasPasswordYes()">
+            <input id='log-in-password-field' type="password" class="span3 optional-field" onfocus="selectHasPasswordYes()"/>
 
-            <a id='go' class='button' href="#" onclick="validateSignIn">Go</a>
+            <a id='go' class='button' href="#">Go</a>
           </form>
       </div>
 
@@ -70,7 +72,9 @@
       </ul>
     </footer>
 
+    <script src="../scripts/verify.js"></script>
     <script type="text/javascript">
+
       function selectHasPasswordNo() {
         document.getElementById("go").innerHTML="Create an Account";
         document.getElementById("go").href="create-account.html"; // TODO: need to validate form first!
@@ -84,9 +88,14 @@
       }
 
       function validateSignIn() {
-
+        var emailField = document.getElementById("log-in-email-field");
+        var passwordField = document.getElementById("log-in-password-field");
+        if (emailField.value == "") {
+          document.getElementById("small-helper-text").addClass("error");
+        }
+        document.getElementById("go").href="#";
       }
+
     </script>
-    <script src="../scripts/verify.js"></script>
   </body>
 </html>
