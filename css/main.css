@@ -221,4 +221,5 @@ input.error:focus {
 
 h3 small {
   display: block;  
+  text-align: center;
 }
