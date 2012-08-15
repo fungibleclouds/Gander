@@ -35,25 +35,25 @@
             <label id='log-in-email-label'>
               What is your work email address?
               <small class='helper-text'>
-                We need your email address to sign in
+                Please enter your email address to sign in.
               </small>
             </label>
             <input id='log-in-email-field' type="email" class="span3" placeholder="email@company.com">
             <label id='log-in-password-label'>
               Do you have a Gander password?
             </label>
-            <input id='has-password-no' type="radio" name="has-password" value="no" />
+            <input id='has-password-no' type="radio" name="has-password" value="no" onfocus="selectHasPasswordNo()" />
             <label id='has-password-label' for='has-password-no'>
               No, I'm a new user.
             </label>
             <br/>
-            <input id='has-password-yes' type="radio" name="has-password" value="yes" />
+            <input id='has-password-yes' type="radio" name="has-password" value="yes" onfocus="selectHasPasswordYes()"/>
             <label id='has-password-label' for='has-password-yes'>
               Yes, my password is:
             </label>
-            <input id='log-in-password-field' type="password" class="span3">
+            <input id='log-in-password-field' type="password" class="span3 optional-field" onfocus="selectHasPasswordYes()">
 
-            <a id='go' class='button' href="create-account.html">Go</a>
+            <a id='go' class='button' href="#" onclick="validateSignIn">Go</a>
           </form>
       </div>
 
@@ -70,6 +70,23 @@
       </ul>
     </footer>
 
+    <script type="text/javascript">
+      function selectHasPasswordNo() {
+        document.getElementById("go").innerHTML="Create an Account";
+        document.getElementById("go").href="create-account.html"; // TODO: need to validate form first!
+        document.getElementById("log-in-password-field").value="";
+      }
+
+      function selectHasPasswordYes() {
+        document.getElementById("go").innerHTML="Go";
+        document.getElementById("go").href="../success-login.html"; // TODO: need to validate form first!
+        document.getElementById("has-password-yes").checked=true;
+      }
+
+      function validateSignIn() {
+
+      }
+    </script>
     <script src="../scripts/verify.js"></script>
   </body>
 </html>

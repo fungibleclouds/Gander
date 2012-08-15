@@ -49,7 +49,7 @@ $('#sign-up').click (e) ->
 
     console.log(readCookieValue('email'))
 
-$('#log-in').click requireFormFill
+$('#go').click requireFormFill
 
 if (readCookieValue 'email-attempt')?
   $('#new-email-field').val (readCookieValue 'email-attempt')

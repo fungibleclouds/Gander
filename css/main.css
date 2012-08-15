@@ -11,7 +11,11 @@ label {
 }
 
 #log-in-password-label {
-  margin-top: 2em;
+  margin-top: 1.5em;
+}
+
+#name-label {
+  margin-top: 1.5em;
 }
 
 #has-password-label {
@@ -206,7 +210,6 @@ input.error:focus {
   display: block; 
   font-size: 0.8em;
   color: rgb(185, 74, 72);
-  margin-left: 1em;
 }
 
 .new-account-helper {
