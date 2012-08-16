@@ -69,13 +69,6 @@
     document.getElementById('has-password-yes')[0].value = true;
   }
 
-  $('#go').click(function(e) {
-    if (requireFormFill(e)) {
-      saveCookieValue('email', $('#new-email-field').val());
-      return console.log(readCookieValue('email'));
-    }
-  });
-
   $('#sign-up').click(function(e) {
     if (requireFormFill(e)) {
       saveCookieValue('email', $('#new-email-field').val());
