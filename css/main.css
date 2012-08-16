@@ -23,10 +23,6 @@ label {
   display: inline-block;
 }
 
-#has-password-no #has-password-yes {
-  display: inline;
-}
-
 h2 {
   font-size: 1.6em;
 }
@@ -137,6 +133,16 @@ h2 {
 
 #waitlist input {
   width: 95%;
+}
+
+#waitlist .radio {
+  display: inline-block;
+  width: 2em;
+}
+
+#waitlist .checkbox {
+  display: inline-block;
+  width: 2em;
 }
 
 #add-to-waitlist, #sign-up, #log-in, #go, #two-button-log-in, #two-button-register {
