@@ -2,7 +2,7 @@
   font-family: 'Lato', sans-serif;
 }
 
-#sign-up-small, #log-in-small, #go-small {
+#sign-up-small, #log-in-small, #two-button-small {
   font-size: 1.1em;
 }
 
@@ -31,8 +31,9 @@ h2 {
   font-size: 1.2em;
 }
 
-#add-to-waitlist, #sign-up, #log-in, #go {
+#add-to-waitlist, #sign-up, #log-in, #go, #two-button-log-in, #two-button-register {
   font-size: 1.6em;
+  font-weight: bold;
 }
 
 footer ul li {
@@ -63,17 +64,28 @@ header {
   margin-right: -0.5em;
 }
 
-#sign-up-small, #log-in-small, #go-small {
+#sign-up-small, #log-in-small, #two-button-small {
   color: white;  
   padding: 5px 7px;
+  margin-top: -2px;
 }
 
 #log-in-small, #log-in {
   background-color: #383838;
 }
 
-#go-small, #go, #sign-up {
+#go, #sign-up, #two-button-log-in {
   background-color: #3B96FF;
+}
+
+#two-button-register {
+  background-color: #ff9822;
+  float:right;
+}
+
+#two-button-small {
+  background-color: #ee7f00;
+  float:right;
 }
 
 #sign-up-small, #add-to-waitlist {
@@ -96,6 +108,10 @@ h2 {
 
 .divider {
   height: 1em;  
+}
+
+#forgot-password a:hover {
+  color: red;
 }
 
 #slogan em {
@@ -123,7 +139,7 @@ h2 {
   width: 95%;
 }
 
-#add-to-waitlist, #sign-up, #log-in, #go {
+#add-to-waitlist, #sign-up, #log-in, #go, #two-button-log-in, #two-button-register {
   display:block;        
   color: white;
   width: 93%;  
@@ -131,6 +147,16 @@ h2 {
   height: 1em;
   text-align: center;
   margin-top: 0.3em;
+}
+
+#two-button-log-in, #two-button-register {
+  width: 40%;
+  display: inline-block;
+  margin-top: 0em;
+}
+
+#go-back-register {
+  margin-top: 10em;
 }
 
 .button {

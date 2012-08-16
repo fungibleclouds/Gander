@@ -13,46 +13,35 @@
 
   <div id='container'>
       <header>
-        <img id='logo' src="../images/Gander-logo-sm.png" border="0" alt="Gander Logo"></img>
+        <a href="index.html">
+          <img id='logo' src="../images/Gander-logo-sm.png" border="0" alt="Gander Logo"></img>
+        </a>
       </header>
 
-      <h2 id='slogan'>
-        <em>Fly</em> through email
+      <h2>
+        Create an Account
       </h2>
-
-      <div id='description'>
-        <p>
-          Gander is a secure, mobile-friendly
-          way to access and search your email.
-        </p>
-      </div>
 
       <div id='waitlist'>
           <form class="well">
-            <h3 class='form-section-header' style=text-align:center>
-              Create Account
-            </h3>
             <label id='log-in-email-label'>
-              Work email address
+              What is your work email address?
               <small class='helper-text'>
                 You need your email address to log in
               </small>
             </label>
-            <input id='log-in-email-field' type="email" class="span3" placeholder="name@company.com">
+            <input id='log-in-email-field' type="email" class="span3" placeholder="email@company.com">
             <label id='log-in-password-label'>
-              Password for Gander
+              Create a new password for Gander
             </label>
-            <input id='log-in-password-field' type="password" class="span3">
-            <input type="checkbox" name="show password">
-            <label id='checkbox-label'>
-              show password to check spelling
+            <input id='log-in-password-field' type="password" class="span3" placeholder="password">
+            <input id='log-in-password-confirmation-field' type="password" class="span3" placeholder="confirm password">
+            <label id='name-label'>
+              What is your name?
             </label>
-            <label id='name-field'>
-              First name
-            </label>
-            <input id='name-field' type="text" class="span3" placeholder="optional">
-            <input type="checkbox" name="agree to privacy policy">
-            <label id='checkbox-label'>
+            <input id='name-field' type="text" class="span3 optional-field" placeholder="optional">
+            <input type="checkbox" name="agree to privacy policy" id="privacy-policy-checkbox">
+            <label id='checkbox-label' for="privacy-policy-checkbox">
               I have read and agree to the <a href="#">Privacy Policy</a>.
             </label>
 
@@ -73,6 +62,10 @@
       </ul>
     </footer>
 
+    <script type="text/javascript">
+
+    </script>
     <script src="../scripts/verify.js"></script>
   </body>
 </html>
+
