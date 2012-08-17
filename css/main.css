@@ -8,6 +8,7 @@
 
 label {
   font-size: 1.3em;
+  cursor: pointer;
 }
 
 #log-in-password-label {
