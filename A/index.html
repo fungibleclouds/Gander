@@ -99,6 +99,10 @@
       }
 
       function validateSignIn() {
+        if (document.getElementById("has-password-yes").checked==true && document.getElementById("log-in-password-field").value=="") {
+          Alert("Need to enter password!");
+          //this.preventDefault();
+        }
         document.getElementById("go").href+=("?email="+document.getElementById("log-in-email-field").value);
       }
     </script>

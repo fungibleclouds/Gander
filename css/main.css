@@ -24,6 +24,17 @@ label {
   display: inline-block;
 }
 
+#back-button-a-index {
+  display: block;
+  margin-top: 0.5em;
+}
+
+#forgot-password {
+  display: block;
+  margin-top: -0.7em;
+  margin-bottom: 1em;
+}
+
 h2 {
   font-size: 1.6em;
 }
