@@ -9,7 +9,7 @@
     <script src="../scripts/jquery-1.7.2.min.js"></script>
   </head>
 
-  <body>
+  <body onload="scrollToLogo()">
 
   <div id='container'>
       <header>
@@ -73,7 +73,10 @@
     </footer>
 
      <script type="text/javascript">
-
+      function scrollToLogo() {
+        document.getElementById("slogan").scrollIntoView();
+      }
+      
       function selectHasPasswordNo() {
         document.getElementById("go").innerHTML="Create an Account";
         document.getElementById("go").href="create-account.html";
