@@ -143,7 +143,7 @@ h2 {
 
 #waitlist .checkbox {
   display: inline-block;
-  width: 2em;
+  width: auto;
 }
 
 #add-to-waitlist, #sign-up, #log-in, #go, #two-button-log-in, #two-button-register {
