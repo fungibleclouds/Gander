@@ -55,7 +55,7 @@
             </label>
             <input id='log-in-password-field' type="password" class="span3 optional-field" onclick="selectHasPasswordYes()" onfocus="selectHasPasswordYes()"/>
             <a id='forgot-password' href="#">Forgot your password?</a>
-            <a id='go' class='button' href="#">Go</a>
+            <a id='go' class='button' href="#" onclick="validateSignIn()">Go</a>
           </form>
       </div>
 
@@ -76,23 +76,19 @@
 
       function selectHasPasswordNo() {
         document.getElementById("go").innerHTML="Create an Account";
-        document.getElementById("go").href="create-account.html"; // TODO: need to validate form first!
+        document.getElementById("go").href="create-account.html";
         document.getElementById("log-in-password-field").value="";
       }
 
       function selectHasPasswordYes() {
         document.getElementById("go").innerHTML="Go";
-        document.getElementById("go").href="../success-login.html"; // TODO: need to validate form first!
+        document.getElementById("go").href="../success-login.html";
         document.getElementById("has-password-yes").checked=true;
       }
 
       function validateSignIn() {
-        var emailField = document.getElementById("log-in-email-field");
-        var passwordField = document.getElementById("log-in-password-field");
-        if (emailField.value == "") {
-          document.getElementById("small-helper-text").addClass("error");
-        }
-        document.getElementById("go").href="#";
+        document.getElementById("go").href+=("?email="+document.getElementById("log-in-email-field").value);
+        document.getElementById("go").href+="#create-account-title";
       }
     </script>
    
