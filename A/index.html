@@ -32,7 +32,7 @@
       <div id='waitlist'>
           <form class="well">
             <h3 class='form-section-header'>
-              Log in/Sign up
+              Sign in
             </h3>
             <label id='log-in-email-label'>
               What is your work email address?
@@ -55,7 +55,7 @@
             </label>
             <input id='log-in-password-field' type="password" class="span3 optional-field" onclick="selectHasPasswordYes()" onfocus="selectHasPasswordYes()"/>
             <a id='forgot-password' href="#">Forgot your password?</a>
-            <a id='go' class='button' href="#" onclick="validateSignIn()">Go</a>
+            <a id='go' class='button' href="#">Go</a>
           </form>
       </div>
 
@@ -98,14 +98,16 @@
         document.getElementById("has-password-yes").checked=true;
       }
 
-      function validateSignIn() {
-        /*
+      document.getElementById("go").onclick = function() {
         if (document.getElementById("has-password-yes").checked && 
             document.getElementById("log-in-password-field").value == "") {
-          this.preventDefault();
+          document.getElementById("small-helper-text").classList.add('error');
+          //return false;
         }
-        */
         document.getElementById("go").href+=("?email="+document.getElementById("log-in-email-field").value);
+        return true;
+      };
+
       }
     </script>
    
