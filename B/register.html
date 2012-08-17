@@ -9,7 +9,7 @@
     <script src="../scripts/jquery-1.7.2.min.js"></script>
   </head>
 
-  <body>
+  <body onload="onLoadFunctions()">
 
   <div id='container'>
       <header>
@@ -23,7 +23,7 @@
         </a>
       </header>
 
-      <h2>
+      <h2 id="create-account-title">
         Create an Account
       </h2>
 
@@ -68,7 +68,13 @@
     </footer>
 
     <script type="text/javascript">
-
+      function onLoadFunctions() {
+        scrollToCreateAccountTitle();
+      }
+      
+      function scrollToCreateAccountTitle() {
+        document.getElementById("create-account-title").scrollIntoView();
+      }
     </script>
     <script src="../scripts/verify.js"></script>
   </body>

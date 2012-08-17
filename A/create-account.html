@@ -9,7 +9,7 @@
     <script src="../scripts/jquery-1.7.2.min.js"></script>
   </head>
 
-  <body onload="populateEmailField()">
+  <body onload="onLoadFunctions()">
 
   <div id='container'>
       <header>
@@ -63,6 +63,15 @@
     </footer>
 
     <script type="text/javascript">
+      function onLoadFunctions() {
+        populateEmailField();
+        scrollToCreateAccountTitle();
+      }
+      
+      function scrollToCreateAccountTitle() {
+        document.getElementById("create-account-title").scrollIntoView();
+      }
+      
       function populateEmailField() {
         var qs = getQueryStrings();
         var email = qs["email"];

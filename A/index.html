@@ -9,7 +9,7 @@
     <script src="../scripts/jquery-1.7.2.min.js"></script>
   </head>
 
-  <body onload="scrollToLogo()">
+  <body onload="onLoadFunctions()">
 
   <div id='container'>
       <header>
@@ -73,8 +73,17 @@
     </footer>
 
      <script type="text/javascript">
+      function onLoadFunctions() {
+        scrollToLogo();
+      }
+      
       function scrollToLogo() {
         document.getElementById("slogan").scrollIntoView();
+      }
+      
+      function uncheckRadioButtons() {
+        document.getElementById("has-password-no").checked=false;
+        document.getElementById("has-password-yes").checked=false;
       }
       
       function selectHasPasswordNo() {
@@ -91,7 +100,6 @@
 
       function validateSignIn() {
         document.getElementById("go").href+=("?email="+document.getElementById("log-in-email-field").value);
-        document.getElementById("go").href+="#create-account-title";
       }
     </script>
    
