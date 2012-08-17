@@ -7,6 +7,29 @@
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
     <script src="../scripts/jquery-1.7.2.min.js"></script>
+     <script type="text/javascript">
+
+      function selectHasPasswordNo() {
+        document.getElementById("go").innerHTML="Create an Account";
+        document.getElementById("go").href="create-account.html"; // TODO: need to validate form first!
+        document.getElementById("log-in-password-field").value="";
+      }
+
+      function selectHasPasswordYes() {
+        document.getElementById("go").innerHTML="Go";
+        document.getElementById("go").href="../success-login.html"; // TODO: need to validate form first!
+        document.getElementById("has-password-yes").checked=true;
+      }
+
+      function validateSignIn() {
+        var emailField = document.getElementById("log-in-email-field");
+        var passwordField = document.getElementById("log-in-password-field");
+        if (emailField.value == "") {
+          document.getElementById("small-helper-text").addClass("error");
+        }
+        document.getElementById("go").href="#";
+      }
+    </script>
   </head>
 
   <body>
@@ -72,29 +95,6 @@
       </ul>
     </footer>
 
-    <script type="text/javascript">
-
-      function selectHasPasswordNo() {
-        document.getElementById("go").innerHTML="Create an Account";
-        document.getElementById("go").href="create-account.html"; // TODO: need to validate form first!
-        document.getElementById("log-in-password-field").value="";
-      }
-
-      function selectHasPasswordYes() {
-        document.getElementById("go").innerHTML="Go";
-        document.getElementById("go").href="../success-login.html"; // TODO: need to validate form first!
-        document.getElementById("has-password-yes").checked=true;
-      }
-
-      function validateSignIn() {
-        var emailField = document.getElementById("log-in-email-field");
-        var passwordField = document.getElementById("log-in-password-field");
-        if (emailField.value == "") {
-          document.getElementById("small-helper-text").addClass("error");
-        }
-        document.getElementById("go").href="#";
-      }
-
-    </script>
+   
   </body>
 </html>
