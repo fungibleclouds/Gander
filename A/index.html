@@ -38,7 +38,7 @@
               What is your work email address?
             </label>
             <small id='email-helper-text' class='helper-text'>
-              Please enter your email address to sign in.
+              Please enter your email address.
             </small>
             <input id='log-in-email-field' type="email" class="span3" placeholder="email@company.com"/>
             <label id='log-in-password-label'>
@@ -57,7 +57,7 @@
               Yes, my password is:
             </label>
             <small id='password-helper-text' class='helper-text'>
-              Please enter your password to sign in.
+              Please enter your password.
             </small>
             <input id='log-in-password-field' type="password" class="span3 optional-field" onclick="selectHasPasswordYes()" onfocus="selectHasPasswordYes()"/>
             <a id='forgot-password' href="#">Forgot your password?</a>
@@ -81,6 +81,7 @@
     <script type="text/javascript">
       function onLoadFunctions() {
         scrollToLogo();
+        selectHasPasswordYes();
       }
       
       function scrollToLogo() {
@@ -93,18 +94,19 @@
       }
       
       function selectHasPasswordNo() {
+        document.getElementById("email-helper-text").classList.remove('error');
+        document.getElementById("password-helper-text").classList.remove('error');    
         document.getElementById("go").innerHTML="Create an Account";
-        document.getElementById("go").href="create-account.html";
         document.getElementById("log-in-password-field").value="";
       }
 
       function selectHasPasswordYes() {
         document.getElementById("go").innerHTML="Go";
-        document.getElementById("go").href="../success-login.html";
         document.getElementById("has-password-yes").checked=true;
       }
 
       document.getElementById('go').onclick = function() {
+        // Validate form
         var error = false;
         if (document.getElementById("has-password-yes").checked) {
           if (document.getElementById("log-in-email-field").value == "") {
@@ -130,6 +132,13 @@
           
         if (error) {
           return false;
+        }
+        
+        // Set go's href
+        if (document.getElementById("has-password-yes").checked) {
+          document.getElementById("go").href="../success-login.html";        
+        } else {
+          document.getElementById("go").href="create-account.html";
         }
         document.getElementById("go").href+=("?email="+document.getElementById("log-in-email-field").value);
         return true;
