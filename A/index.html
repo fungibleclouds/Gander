@@ -36,7 +36,7 @@
             </h3>
             <label id='log-in-email-label'>
               What is your work email address?
-              <small id='small-helper-text' class='helper-text'>
+              <small id='email-helper-text' class='helper-text'>
                 Please enter your email address to sign in.
               </small>
             </label>
@@ -53,6 +53,9 @@
             <label id='has-password-label' for='has-password-yes'>
               Yes, my password is:
             </label>
+            <small id='password-helper-text' class='helper-text'>
+              Please enter your password to sign in.
+            </small>
             <input id='log-in-password-field' type="password" class="span3 optional-field" onclick="selectHasPasswordYes()" onfocus="selectHasPasswordYes()"/>
             <a id='forgot-password' href="#">Forgot your password?</a>
             <a id='go' class='button' href="#">Go</a>
@@ -98,18 +101,30 @@
         document.getElementById("has-password-yes").checked=true;
       }
 
-      document.getElementById("go").onclick = function() {
-        /*if (document.getElementById("has-password-yes").checked && 
-            document.getElementById("log-in-password-field").value == "") {
-          document.getElementById("small-helper-text").classList.add('error');
-          //return false;
+      document.getElementById('go').onclick = function() {
+        if (document.getElementById("has-password-yes").checked) {
+          var error = false;
+          if (document.getElementById("log-in-email-field").value == "") {
+            document.getElementById("email-helper-text").classList.add('error');
+            error = true;
+          } else {
+            document.getElementById("email-helper-text").classList.remove('error');
+          }
+          if (document.getElementById("log-in-password-field").value == "") {
+            document.getElementById("password-helper-text").classList.add('error');
+            error = true;
+          } else {
+            document.getElementById("password-helper-text").classList.remove('error');          
+          }
+          if (error) {
+            return false;
+          }
         }
+        
         document.getElementById("go").href+=("?email="+document.getElementById("log-in-email-field").value);
         return true;
-        */
       };
-
-      }
+      
     </script>
    
   </body>
