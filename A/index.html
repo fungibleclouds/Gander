@@ -96,12 +96,14 @@
         document.getElementById("email-helper-text").classList.remove('error');
         document.getElementById("password-helper-text").classList.remove('error');    
         document.getElementById("go").innerHTML="Create an Account";
-        document.getElementById("log-in-password-field").value="";
+        //document.getElementById("log-in-password-field").value="";
+        document.getElementById("log-in-password-field").disabled="disabled";
       }
 
       function selectHasPasswordYes() {
         document.getElementById("go").innerHTML="Go";
         document.getElementById("has-password-yes").checked=true;
+        document.getElementById("log-in-password-field").disabled="";
       }
 
       document.getElementById('go').onclick = function() {
@@ -147,3 +149,4 @@
    
   </body>
 </html>
+

@@ -23,6 +23,14 @@ label {
   display: inline-block;
 }
 
+/*
+#waitlist #log-in-password-field {
+  margin-left: 7%;
+  width: 88%;
+  display: inline-block;
+}
+*/
+
 #back-button-a-index {
   display: block;
   margin-top: 0.5em;
@@ -33,7 +41,8 @@ label {
 #forgot-password {
   display: block;
   margin-top: -0.7em;
-  margin-bottom: 1em;
+  margin-bottom: 0em;
+  text-align: right;
 }
 
 h2 {
