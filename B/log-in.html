@@ -28,8 +28,14 @@
       <div id='waitlist'>
           <form class="well">
             <label id='log-in-email-label'>Work email</label>
+            <small id='email-helper-text' class='helper-text'>
+              Please enter your email address to sign in.
+            </small>
             <input id='log-in-email-field' type="email" class="span3" placeholder="email@company.com">
             <label id='log-in-email-label'>Password</label>
+            <small id='password-helper-text' class='helper-text'>
+              Please enter your password to sign in.
+            </small>
             <input id='log-in-password-field' type="password" class="span3">
             <a id='forgot-password' href="#">Forgot your password?</a>
             <a id='go' class='button' href="../success-login.html">Log In</a>
@@ -48,6 +54,28 @@
         <li><a href="#">Privacy</a></li>
       </ul>
     </footer>
-    <script src="../scripts/verify.js"></script>    
+    
+    <script type="text/javascript">
+      document.getElementById('go').onclick = function() {
+        var error = false;
+        if (document.getElementById("log-in-email-field").value == "") {
+          document.getElementById("email-helper-text").classList.add('error');
+          error = true;
+        } else {
+          document.getElementById("email-helper-text").classList.remove('error');
+        }
+        if (document.getElementById("log-in-password-field").value == "") {
+          document.getElementById("password-helper-text").classList.add('error');
+          error = true;
+        } else {
+          document.getElementById("password-helper-text").classList.remove('error');          
+        }
+        if (error) {
+          return false;
+        }
+        
+        return true;
+      };
+    </script>    
   </body>
 </html>
