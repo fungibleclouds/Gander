@@ -96,7 +96,6 @@
         document.getElementById("email-helper-text").classList.remove('error');
         document.getElementById("password-helper-text").classList.remove('error');    
         document.getElementById("go").innerHTML="Create an Account";
-        //document.getElementById("log-in-password-field").value="";
         document.getElementById("log-in-password-field").disabled="disabled";
       }
 
@@ -135,7 +134,7 @@
           return false;
         }
         
-        // Set go's href
+        // Set Go button's href
         if (document.getElementById("has-password-yes").checked) {
           document.getElementById("go").href="../success-login.html";        
         } else {
