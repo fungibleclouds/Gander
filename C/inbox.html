@@ -38,18 +38,37 @@
         <table class='message-list'>
           <tr class='message'>
             <td>
-              <p class='from'>Gander</p>
-              <p class='date'>August 3, 2012</p>
-              <p class='subject'>Gander is the bomb.</p>
-              <p class='content'>Check out our features below. Prepare to be amazed.</p>
+              <label class="message-checkbox-label" for="message-checkbox1"/>
+              <input class="message-checkbox" type="checkbox" id="message-checkbox1"></input>
             </td>
-          </tr>
-          <tr class='message'>
             <td>
               <p class='from'>Gander</p>
               <p class='date'>August 3, 2012</p>
               <p class='subject'>Gander is the bomb.</p>
-              <p class='content'>Check out our features below. Prepare to be amazed.</p>
+              <p class='content'>Check out our features.  Prepare to be amazed.</p>
+            </td>
+          </tr>
+          <tr class='message'>
+            <td>
+              <label class="message-checkbox-label" for="message-checkbox2"/>
+              <input class="message-checkbox" type="checkbox" id="message-checkbox2"></input>
+            </td>
+            <td>
+              <p class='from'>Gander</p>
+              <p class='date'>August 3, 2012</p>
+              <p class='subject'>Gander is the bomb.</p>
+              <p class='content'>Check out our features.  Prepare to be amazed.</p>
+            </td>
+          </tr>          <tr class='message'>
+            <td>
+              <label class="message-checkbox-label" for="message-checkbox3"/>
+              <input class="message-checkbox" type="checkbox" id="message-checkbox3"></input>
+            </td>
+            <td>
+              <p class='from'>Gander</p>
+              <p class='date'>August 3, 2012</p>
+              <p class='subject'>Gander is the bomb.</p>
+              <p class='content'>Check out our features.  Prepare to be amazed.</p>
             </td>
           </tr>
         </table>
@@ -65,6 +84,19 @@
         <li><a href="#">Privacy</a></li>
       </ul>
     </footer>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".CheckBoxClass").change(function() {
+          if($(this).is(":checked")) {
+            $(this).next("label").addClass("LabelSelected");
+          } else {
+            $(this).next("label").removeClass("LabelSelected");
+          }
+        });
+      });
+    </script>
+
 
     <script type="text/javascript">
       function onLoadFunctions() {

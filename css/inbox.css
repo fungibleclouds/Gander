@@ -14,7 +14,7 @@ a.folder-header:hover {
   display: inline-block;
   margin: 0;
   border: 1px solid #CCC;
-  border-radius: .5em;
+  border-radius: 1em;
   width: 75%
 }
 
@@ -37,16 +37,13 @@ a.folder-header:hover {
 
 table.message-list {
   margin: 0;
-  border-style: solid;
-  border-width: 1px;
+  //border: 1px solid black;
   width: 100%;
 }
 
 .message {
-  margin-top: 2px;
   display: block;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom: 1px solid black;
   width: 100%;
 }
 
@@ -57,14 +54,36 @@ table.message-list {
   font-size: 1em;
 }
 
+.message label.message-checkbox-label {
+  width: 30px;
+  height: 60px;
+  /* Firefox */
+  display:-moz-box;
+  -moz-box-orient:horizontal;
+  -moz-box-pack:center;
+  -moz-box-align:center;
+
+  /* Safari and Chrome */
+  display:-webkit-box;
+  -webkit-box-orient:horizontal;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+
+  /* W3C */
+  display:box;
+  box-orient:horizontal;
+  box-pack:center;
+  box-align:center;
+}
+
 .message p.from {
-  margin-top: 2px;
   font-size: 1.2em;
   font-weight: bold;
   float: left;
 }
 
 .message p.date {
+  margin-top: 2px;
   float: right;
   margin-right: 2px;
 }
