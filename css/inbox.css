@@ -1,0 +1,35 @@
+a.folder-header:hover {
+  text-decoration: none;
+  text-underline: 
+}
+
+.message-list-container {
+  max-width: 21em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1.1em;
+}
+
+.message-list-container #search-field {
+  display: inline-block;
+  margin: 0em;
+  padding-left: 0.8em;
+  border-radius: 0em;
+  width: 80%
+}
+
+#messages-search-btn {
+  float: right;
+  padding: 3px 8px 3px 8px;
+}
+
+.icon-search {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: text-top;
+  text-align: center;
+  background-position:-48px 0px;
+  background-image: url("../images/glyphicons.png");
+}
