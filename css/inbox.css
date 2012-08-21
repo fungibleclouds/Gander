@@ -95,3 +95,25 @@ table.message-list {
 .message p.content {
   color: gray;
 }
+
+footer .well {
+  margin: 0;  
+  padding: 0.2em;
+  height: 2em;
+  padding-top: 1em;
+  padding-bottom: 0.7em;
+}
+
+footer {
+  margin: 1em 0em;
+  text-align: center;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0.5em;
+}
+
+footer ul a {
+  padding: 0.4em;
+}
