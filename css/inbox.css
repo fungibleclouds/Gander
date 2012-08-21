@@ -12,9 +12,9 @@ a.folder-header:hover {
 
 .message-list-container #search-field {
   display: inline-block;
-  margin: 0em;
+  margin: 0;
   padding-left: 0.8em;
-  border-radius: 0em;
+  border-radius: 0;
   width: 80%
 }
 
@@ -32,4 +32,46 @@ a.folder-header:hover {
   text-align: center;
   background-position:-48px 0px;
   background-image: url("../images/glyphicons.png");
+}
+
+table.message-list {
+  margin: 0;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+}
+
+.message {
+  margin-top: 2px;
+  display: block;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  width: 100%;
+}
+
+.message p {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.message p.from {
+  margin-top: 2px;
+  font-size: 1.1em;
+  font-weight: bold;
+  float: left;
+}
+
+.message p.date {
+  float: right;
+  margin-right: 2px;
+}
+
+.message p.subject {
+  clear: both;
+}
+
+.message p.content {
+  color: gray;
 }

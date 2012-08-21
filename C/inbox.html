@@ -3,13 +3,13 @@
   <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
     <title>Gander - Sign In</title>
-    <link rel="stylesheet/less" type="text/css" href="styles.less">
-    <script src="less.js" type="text/javascript"></script>
-    <link href='http://fonts.googleapis.com/css?family=Lato|Courgette' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato|Courgette' rel='stylesheet' type='text/css' />
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
     <link href="../css/inbox.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="../css/inbox.css.less" rel="stylesheet/less" type="text/css" /> -->
     <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <!-- <script src="../scripts/less-1.3.0.min.js" type="text/javascript"></script> -->
   </head>
 
   <body onload="onLoadFunctions()">
@@ -35,16 +35,23 @@
           </button>
         </div>
   
-        <ol class='message-list'>
-          <li class='message'>
-            <p class='from'>Gander</p>
-            <p class='subject'>Gander is the bomb.</p>
-            <p class='content'>Check out the Features link below. Prepare to be amazed.</p>
-          </li>
-          <li class='message'>B</li>
-          <li class='message'>C</li>
-        </ol>
-
+        <table class='message-list'>
+          <tr class='message'>
+            <td>
+              <p class='from'>Gander</p>
+              <p class='date'>August 3, 2012</p>
+              <p class='subject'>Gander is the bomb.</p>
+              <p class='content'>Check out our features below. Prepare to be....</p>
+            </td>
+          </tr>
+          <tr class='message'>
+            <td>
+              <p class='from'>Gander</p>
+              <p class='date'>August 3, 2012</p>
+              <p class='subject'>Gander is the bomb.</p>
+            </td>
+          </tr>
+        </table>
 
       </div>
     </div>
