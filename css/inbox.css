@@ -15,22 +15,13 @@ a.folder-header:hover {
   margin: 0;
   border: 1px solid #CCC;
   border-radius: .5em;
-  width: 80%
+  width: 75%
 }
 
 #messages-search-btn {
   display: inline-block;
   float: right;
   padding: 3px 8px 3px 8px;
-  border-width: 2px;
-}
-
-.message-list-container input:focus,textarea:focus,select:focus{
-  border: none;
-  -webkit-box-shadow:0 0 6px #007eff;
-  -moz-box-shadow:0 0 5px #007eff;
-  box-shadow:0 0 5px #007eff;
-  outline: none;
 }
 
 .icon-search {
@@ -63,12 +54,12 @@ table.message-list {
   display: block;
   padding: 0;
   margin: 0;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .message p.from {
   margin-top: 2px;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: bold;
   float: left;
 }
