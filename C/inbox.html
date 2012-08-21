@@ -21,9 +21,9 @@
         </a>
       </header>
 
-      <h2> 
+      <h2 class="folder-header-wrapper"> 
         <span>
-          <a class="folder-header" type="button">inbox</a>
+          <a class="folder-header" type="button" id="inbox-header">inbox</a>
         </span>
       </h2>
 
@@ -136,7 +136,9 @@
           </tr>
         </table>
       </div>
+      
       <div id='push'><!--//--></div>
+      
     </div>
     
     <footer>
@@ -150,16 +152,18 @@
 
     <script type="text/javascript">
       $(document).ready(function() {
-        $(".CheckBoxClass").change(function() {
-          if($(this).is(":checked")) {
-            $(this).next("label").addClass("LabelSelected");
+        var numSelected = 0;
+        $(".message-checkbox").change(function() {         
+          if ($(this).prop("checked", true)) {
+            numSelected++;
           } else {
-            $(this).next("label").removeClass("LabelSelected");
-          }
+            numSelected--;
+          }    
+          alert("There are " + numSelected + " messages selected.");
+          //$(this).parent().addClass("unread")
         });
       });
     </script>
-
 
     <script type="text/javascript">
       function onLoadFunctions() {
@@ -167,7 +171,7 @@
       }
       
       function scrollToLogo() {
-        document.getElementById("slogan").scrollIntoView();
+        document.getElementById("inbox-header").scrollIntoView();
       }
     </script>
    
