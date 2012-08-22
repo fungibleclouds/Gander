@@ -23,10 +23,8 @@
 
       <div class='message-list-container'>
         <div class='search-bar-container'>
-          <input id='search-field' type="text" placeholder="Search messages and folders" />
-          <button type="submit" class="search-btn" id="messages-search-btn">
-            <i class="icon-search"></i>
-          </button>
+          <input id='search-field' type="text" placeholder="search all your messages and folders" />
+          <i class="icon-search"></i>
         </div>
   
         <table class='message-list'>
@@ -131,6 +129,27 @@
         </table>
       </div>
       
+      <div class="folder-list-container">
+        <ol class="folder-list" style="">
+          <li>Inbox</li>
+          <li>Sent Items</li>
+          <li>Drafts</li>
+          <li>Travel
+            <ol>
+              <li>Flight Tickets</li>
+              <li>Resort Coupons</li>
+            </ol>
+          </li>
+          <li>Business
+            <ol>
+              <li>Meeting Notes</li>
+              <li>Customer Feedback</li>
+              <li>Archive</li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+      
       <div id='push'><!--//--></div>
       
     </div>
@@ -159,6 +178,8 @@
         
         $(".folder-header").click(function() {
           $(".message-list-container").slideToggle("slow");
+          $(".folder-list-container").slideToggle("slow");
+//          $(".folder-list-container").toggleClass("show");
         });
       });
     </script>

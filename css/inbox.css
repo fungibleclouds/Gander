@@ -2,38 +2,49 @@ h2.folder-header-wrapper {
   margin: 0;
 }
 
+a.folder-header {
+  color: #4444FF
+}
+
 a.folder-header:hover {
   text-decoration: none;
+  cursor: pointer;
   text-underline:
-   
-  color: #3B96FF;
+  color: #0000FF;
 }
 
 .message-list-container {
-  max-width: 24em;
+  width: 25em;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 1.1em;
 }
 
+.message-list-container .search-bar-container {
+  position: relative;
+}
+
 .message-list-container #search-field {
-  display: inline-block;
-  padding-left: 1em;
-  margin: 0em 0em 0.5em 0.5em;
-  border: 1px solid #CCC;
+  display: block;
+  padding-left: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #CCC;
   border-radius: 1em;
-  width: 90%
+  width: 20em;
 }
 
-#messages-search-btn {
-  display: inline-block;
-  float: right;
-  padding: 3px 8px 3px 8px;
-  display: none; /* temporary fix */
+.message-list-container .search-q {
+  position: absolute;
+  left: 2.1em;
+  top: 0.4em;
 }
 
-.icon-search {
-  display: inline-block;
+.message-list-container .icon-search {
+  position: absolute;
+  left: 2em;
+  top: 0.6em;
+  
   width: 14px;
   height: 14px;
   line-height: 14px;
@@ -45,11 +56,10 @@ a.folder-header:hover {
 
 table.message-list {
   margin: 0;
-  margin-top: 4px;
-  margin-bottom: 2em;
+  margin: 4px auto 2em auto;
   border-top: 1px solid black;
-  width: 100%;
-  background-color: #F5F5F5;
+  width: 24em;
+  background-color: white;
 }
 
 .message {
@@ -61,7 +71,7 @@ table.message-list {
 }
 
 .message.unread {
-  background-color: #b1d5ff;
+  background-color: #EEEEFF;
 }
 
 .message p {
@@ -116,4 +126,15 @@ a.message-link {
 
 .message p.content {
   color: gray;
+}
+
+.folder-list-container {
+  display: none;
+  width: 25em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.show {
+  display: block;
 }
