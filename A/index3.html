@@ -93,8 +93,12 @@
       }
       
       function selectHasPasswordNo() {
-        document.getElementById("email-helper-text").classList.remove('error');
-        document.getElementById("password-helper-text").classList.remove('error');    
+        try {
+          document.getElementById("email-helper-text").classList.remove('error');
+        } catch (err) {}
+        try {
+          document.getElementById("password-helper-text").classList.remove('error');    
+        } catch (err) {}
         document.getElementById("go").innerHTML="Create an Account";
         document.getElementById("log-in-password-field").disabled="disabled";
       }
@@ -113,13 +117,17 @@
             document.getElementById("email-helper-text").classList.add('error');
             error = true;
           } else {
-            document.getElementById("email-helper-text").classList.remove('error');
+            try {
+              document.getElementById("email-helper-text").classList.remove('error');
+            } catch (err) {}
           }
           if (document.getElementById("log-in-password-field").value == "") {
             document.getElementById("password-helper-text").classList.add('error');
             error = true;
           } else {
-            document.getElementById("password-helper-text").classList.remove('error');          
+            try {
+              document.getElementById("password-helper-text").classList.remove('error');          
+            } catch (err) {}
           }
         } 
         if (!document.getElementById("has-password-yes").checked && 
@@ -127,7 +135,9 @@
           document.getElementById("radio-helper-text").classList.add('error');
           error = true;
         } else {
-          document.getElementById("radio-helper-text").classList.remove('error');
+          try {
+            document.getElementById("radio-helper-text").classList.remove('error');
+          } catch (err) {}
         }
           
         if (error) {
