@@ -34,12 +34,6 @@ a.folder-header:hover {
   width: 20em;
 }
 
-.message-list-container .search-q {
-  position: absolute;
-  left: 2.1em;
-  top: 0.4em;
-}
-
 .message-list-container .icon-search {
   position: absolute;
   left: 2em;
@@ -58,7 +52,7 @@ table.message-list {
   margin: 0;
   margin: 4px auto 2em auto;
   border-top: 1px solid black;
-  width: 24em;
+  width: 25em;
   background-color: white;
 }
 
