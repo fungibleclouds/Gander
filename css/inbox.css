@@ -45,7 +45,6 @@ table.message-list {
 }
 
 .message {
-  display: block;
   border-bottom: 1px solid #BBB;
   width: 100%;
   min-width: 24em;
@@ -97,6 +96,7 @@ a.message-link {
   padding: 0;
   margin: 0;
   font-size: 1.1em;
+  height: 1.2em;
   font-family: Arial, sans-serif;
   overflow: hidden;
 }
@@ -117,6 +117,7 @@ a.message-link {
 .message p.subject {
   clear: both;
   position: relative;
+  bottom: 2px;
 }
 
 .message p.content {

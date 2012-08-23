@@ -123,10 +123,10 @@
         
         <div class="button-ribbon hidden">
           <ul class="button-list">
-            <li class="deselect"><p>deselect</p></li>
+            <li class="cancel"><p>cancel</p></li>
             <li class="trash"><p>trash</p></li>
             <li class="move"><p>move</p></li>
-            <li class="mark-read-unread"><p>mark</p></li>
+            <li class="mark"><p>mark</p></li>
             <li class="more"><p>more</p></li>
           </ul>
         </div>
@@ -183,6 +183,39 @@
           } else {
             $(".button-ribbon").addClass("hidden");
           }
+        });
+        
+        $(".cancel").click(function() {
+          $(".message-check-box").removeClass("selected");
+          $(".button-ribbon").addClass("hidden");
+        });
+
+        $(".trash").click(function() {
+          $(".message-check-box").removeClass("selected");
+          $(".message-check-box").parent().parent().addClass("hidden");
+          $(".button-ribbon").addClass("hidden");
+        });
+        
+        $(".move").click(function() {
+          $(".message-check-box").removeClass("selected");
+          alert("Now you would choose a folder.");
+          $(".button-ribbon").addClass("hidden");
+        });
+        
+        $(".mark").click(function() {
+          $(".message-check-box").each(function() {
+            if ($(this).hasClass("selected")) {
+              $(this).parent().parent().toggleClass("unread");            
+              $(this).removeClass("selected");
+            }
+          });
+          $(".button-ribbon").addClass("hidden");
+        });
+        
+        $(".more").click(function() {
+          $(".message-check-box").removeClass("selected");
+          alert("Sorry, there aren't any more options yet.");
+          $(".button-ribbon").addClass("hidden");
         });
         
         $(".folder-header").click(function() {
