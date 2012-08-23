@@ -13,7 +13,7 @@ a.folder-header:hover {
 }
 
 .message-list-container {
-  width: 25em;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 1.1em;
@@ -28,7 +28,7 @@ a.folder-header:hover {
   padding-left: 2em;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #777;
+  border: 2px solid #999;
   border-radius: 1em;
   width: 20em;
 }
@@ -51,13 +51,13 @@ table.message-list {
   margin: 0;
   margin: 4px auto 2em auto;
   border-top: 1px solid black;
-  width: 25em;
+  width: 100%;
   background-color: white;
 }
 
 .message {
   display: block;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid #999;
   width: 100%;
   min-width: 24em;
   height: 75px;
@@ -79,8 +79,8 @@ table.message-list {
   width: 16px;
   height: 16px;
   background-color: white;
-  border: 1px solid black;
-  margin: auto 12px auto 12px;
+  border: 2px solid #999;
+  margin: auto 11px auto 11px;
 }
 
 .message .message-check-box:hover {
@@ -117,7 +117,6 @@ a.message-link {
   position: relative;
   top: 2px;
   right: 6px;
-  /*padding-right: 8px;*/
 }
 
 .message p.subject {
