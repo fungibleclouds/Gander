@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 h2.folder-header-wrapper {
   margin: 0;
 }
@@ -94,6 +98,7 @@ a.message-link {
   margin: 0;
   font-size: 1.1em;
   font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
 .message p.from {
@@ -115,6 +120,7 @@ a.message-link {
 }
 
 .message p.content {
+  height: 30px;
   line-height: 110%;
   color: #777;
 }
@@ -128,4 +134,40 @@ a.message-link {
 
 .folder-list-container.show {
   display: block;
+}
+
+.button-ribbon {
+  position: fixed;
+  bottom: 0;
+  width: 320px;
+  left: 50%;
+  margin-left: -160px;
+}
+
+.button-list {
+  margin: 0;
+  padding: 0;
+}
+
+.button-list li {
+  margin: 0 5px;
+  list-style-type: none;
+  float: left;
+  text-align: center;
+  width: 50px;
+  background-color: #CCC;
+  border: 2px black solid;
+}
+
+.button-list li:hover {
+  cursor: pointer;
+}
+
+.button-list li p {
+  margin: 50px 0 3px 0;
+  text-decoration: none;
+  overflow: hidden;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
 }

@@ -36,7 +36,8 @@
                 <p class='from'>Gander</p>
                 <p class='date'>5:44pm</p>
                 <p class='subject'>Get started with Gander</p>
-                <p class='content'>Hello! Start getting all your emails in Gander by entering your credentials at this link...</p>
+                <p class='content'>Hello! Start getting all your emails in Gander by entering your credentials...</p>
+                </div>
               </a>
             </td>
           </tr>
@@ -119,6 +120,16 @@
             </td>
           </tr>
         </table>
+        
+        <div class="button-ribbon hidden">
+          <ul class="button-list">
+            <li class="deselect"><p>deselect</p></li>
+            <li class="trash"><p>trash</p></li>
+            <li class="move"><p>move</p></li>
+            <li class="mark-read-unread"><p>mark</p></li>
+            <li class="more"><p>more</p></li>
+          </ul>
+        </div>
       </div>
       
       <div class="folder-list-container">
@@ -157,20 +168,21 @@
 
     <script type="text/javascript">
       $(document).ready(function() {
+        var numSelected = 0;
         $(".message-check-box").click(function() {
           $(this).toggleClass("selected");
-        });
-        
-        
-        var numSelected = 0;
-        $(".message-checkbox").change(function() {         
-          if ($(this).prop("checked", true)) {
+          
+          if ($(this).hasClass("selected")) {
             numSelected++;
           } else {
             numSelected--;
-          }    
-          alert("There are " + numSelected + " messages selected.");
-          //$(this).parent().addClass("unread")
+          }
+          
+          if (numSelected > 0) {
+            $(".button-ribbon").removeClass("hidden");
+          } else {
+            $(".button-ribbon").addClass("hidden");
+          }
         });
         
         $(".folder-header").click(function() {
