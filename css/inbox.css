@@ -9,7 +9,6 @@ a.folder-header {
 a.folder-header:hover {
   text-decoration: none;
   cursor: pointer;
-  text-underline:
   color: #0000FF;
 }
 
@@ -29,7 +28,7 @@ a.folder-header:hover {
   padding-left: 2em;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid black;
+  border: 1px solid #777;
   border-radius: 1em;
   width: 20em;
 }
@@ -58,7 +57,7 @@ table.message-list {
 
 .message {
   display: block;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #777;
   width: 100%;
   min-width: 24em;
   height: 60px;
@@ -80,7 +79,7 @@ table.message-list {
   width: 16px;
   height: 16px;
   background-color: white;
-  border: 2px solid black;
+  border: 1px solid black;
   margin: 19px 12px 19px 12px;
 }
 
@@ -93,29 +92,6 @@ table.message-list {
   background-image: url("../images/glyphicons.png");
 }
 
-.message label.message-checkbox-label {
-  margin: 0;
-  width: 45px;
-  height: 50px;
-  /* Firefox */
-  display:-moz-box;
-  -moz-box-orient:horizontal;
-  -moz-box-pack:center;
-  -moz-box-align:center;
-
-  /* Safari and Chrome */
-  display:-webkit-box;
-  -webkit-box-orient:horizontal;
-  -webkit-box-pack:center;
-  -webkit-box-align:center;
-
-  /* W3C */
-  display:box;
-  box-orient:horizontal;
-  box-pack:center;
-  box-align:center;
-}
-
 a.message-link {
   color: black;
   text-decoration: none;
@@ -126,25 +102,28 @@ a.message-link {
   padding: 0;
   margin: 0;
   font-size: 1em;
+  font-family: Arial,sans-serif;
 }
 
 .message p.from {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
   float: left;
 }
 
 .message p.date {
-  margin-top: 4px;
   float: right;
 }
 
 .message p.subject {
   clear: both;
+  position: relative;
+  bottom: 4px;
 }
 
 .message p.content {
-  color: gray;
+  margin-top: -4px;
+  color: #777;
 }
 
 .folder-list-container {
@@ -154,6 +133,6 @@ a.message-link {
   margin-right: auto;
 }
 
-.show {
+.folder-list-container.show {
   display: block;
 }
