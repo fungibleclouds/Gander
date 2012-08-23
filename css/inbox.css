@@ -150,11 +150,11 @@ a.message-link {
 }
 
 .button-list li {
-  margin: 0 5px;
+  margin: 0 3px;
   list-style-type: none;
   float: left;
   text-align: center;
-  width: 50px;
+  width: 54px;
   background-color: #CCC;
   border: 2px black solid;
 }
@@ -164,7 +164,7 @@ a.message-link {
 }
 
 .button-list li p {
-  margin: 50px 0 3px 0;
+  margin: 50px 0 2px 0;
   text-decoration: none;
   overflow: hidden;
   font-size: 1em;
