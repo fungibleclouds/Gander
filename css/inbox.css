@@ -60,7 +60,7 @@ table.message-list {
   border-bottom: 1px solid #777;
   width: 100%;
   min-width: 24em;
-  height: 60px;
+  height: 64px;
   margin: 0;
   padding: 0;
 }
@@ -113,16 +113,18 @@ a.message-link {
 
 .message p.date {
   float: right;
+  padding-right: 4px;
 }
 
 .message p.subject {
   clear: both;
   position: relative;
-  bottom: 4px;
+  bottom: 2px;
 }
 
 .message p.content {
-  margin-top: -4px;
+  margin-top: -3px;
+  line-height: 100%;
   color: #777;
 }
 
