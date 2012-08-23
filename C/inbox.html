@@ -29,9 +29,8 @@
   
         <table class='message-list'>
           <tr class='message unread'>
-            <td>
-              <label class="message-checkbox-label" for="message-checkbox1"/>
-              <input class="message-checkbox" type="checkbox" id="message-checkbox1"></input>
+            <td class='check-box-cell'>
+              <div class="message-check-box"></div>
             </td>
             <td>
               <a href="../A/index.html" class="message-link">
@@ -43,9 +42,8 @@
             </td>
           </tr>
           <tr class='message unread'>
-            <td>
-              <label class="message-checkbox-label" for="message-checkbox2"/>
-              <input class="message-checkbox" type="checkbox" id="message-checkbox2"></input>
+            <td class='check-box-cell'>
+              <div class="message-check-box"></div>
             </td>
             <td>
               <a href="../A/index.html" class="message-link">
@@ -57,9 +55,8 @@
             </td>
           </tr>
           <tr class='message'>
-            <td>
-              <label class="message-checkbox-label" for="message-checkbox3"/>
-              <input class="message-checkbox" type="checkbox" id="message-checkbox3"></input>
+            <td class='check-box-cell'>
+              <div class="message-check-box"></div>
             </td>
             <td>
               <a href="../A/index.html" class="message-link">
@@ -71,9 +68,8 @@
             </td>
           </tr>
           <tr class='message unread'>
-            <td>
-              <label class="message-checkbox-label" for="message-checkbox4"/>
-              <input class="message-checkbox" type="checkbox" id="message-checkbox4"></input>
+            <td class='check-box-cell'>
+              <div class="message-check-box"></div>
             </td>
             <td>
               <a href="../A/index.html" class="message-link">
@@ -85,9 +81,8 @@
             </td>
           </tr>
           <tr class='message'>
-            <td>
-              <label class="message-checkbox-label" for="message-checkbox5"/>
-              <input class="message-checkbox" type="checkbox" id="message-checkbox5"></input>
+            <td class='check-box-cell'>
+              <div class="message-check-box"></div>
             </td>
             <td>
               <a href="../A/index.html" class="message-link">
@@ -99,9 +94,8 @@
             </td>
           </tr>
           <tr class='message'>
-            <td>
-              <label class="message-checkbox-label" for="message-checkbox6"/>
-              <input class="message-checkbox" type="checkbox" id="message-checkbox6"></input>
+            <td class='check-box-cell'>
+              <div class="message-check-box"></div>
             </td>
             <td>
               <a href="../A/index.html" class="message-link">
@@ -113,9 +107,8 @@
             </td>
           </tr>
           <tr class='message'>
-            <td>
-              <label class="message-checkbox-label" for="message-checkbox7"/>
-              <input class="message-checkbox" type="checkbox" id="message-checkbox7"></input>
+            <td class='check-box-cell'>
+              <div class="message-check-box"></div>
             </td>
             <td>
               <a href="../A/index.html" class="message-link">
@@ -165,6 +158,11 @@
 
     <script type="text/javascript">
       $(document).ready(function() {
+        $(".message-check-box").click(function() {
+          $(this).toggleClass("selected");
+        });
+        
+        
         var numSelected = 0;
         $(".message-checkbox").change(function() {         
           if ($(this).prop("checked", true)) {
