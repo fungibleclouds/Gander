@@ -19,45 +19,30 @@ a.folder-header:hover {
   padding-bottom: 1.1em;
 }
 
-.message-list-container .search-bar-container {
-  position: relative;
-}
-
-.message-list-container #search-field {
+.message-list-container .search-field {
   display: block;
   padding-left: 2em;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid #999;
+  border: 2px solid black;
   border-radius: 1em;
   width: 20em;
-}
-
-.message-list-container .icon-search {
-  position: absolute;
-  left: 2em;
-  top: 0.6em;
-  
-  width: 14px;
-  height: 14px;
-  line-height: 14px;
-  vertical-align: text-top;
-  text-align: center;
-  background-position:-48px 0px;
-  background-image: url("../images/glyphicons.png");
+  background-position: 0.6em 0.4em;
+  background-image: url("../images/search-icon.png");
+  background-repeat: no-repeat;
 }
 
 table.message-list {
   margin: 0;
   margin: 4px auto 2em auto;
-  border-top: 1px solid black;
+  border-top: 1px solid #BBB;
   width: 100%;
   background-color: white;
 }
 
 .message {
   display: block;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #BBB;
   width: 100%;
   min-width: 24em;
   height: 75px;
@@ -79,7 +64,7 @@ table.message-list {
   width: 16px;
   height: 16px;
   background-color: white;
-  border: 2px solid #999;
+  border: 2px solid black;
   margin: auto 11px auto 11px;
 }
 
@@ -97,12 +82,17 @@ a.message-link {
   text-decoration: none;
 }
 
+.message .message-preview-cell {
+  max-width: 40em;
+  position: relative;
+}
+
 .message p {
   display: block;
   padding: 0;
   margin: 0;
   font-size: 1.1em;
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .message p.from {
@@ -113,8 +103,7 @@ a.message-link {
 }
 
 .message p.date {
-  float: right;
-  position: relative;
+  position: absolute;
   top: 2px;
   right: 6px;
 }
