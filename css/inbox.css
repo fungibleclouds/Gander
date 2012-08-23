@@ -172,3 +172,9 @@ a.message-link {
   font-weight: bold;
   font-family: Arial, sans-serif;
 }
+
+.button-list .cancel {
+  background-position: -311px 10px;
+  /*background-image: url("../images/glyphicons.png");*/
+  background-repeat: no-repeat;
+}
