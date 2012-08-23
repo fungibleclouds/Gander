@@ -114,7 +114,10 @@ a.message-link {
 
 .message p.date {
   float: right;
-  padding-right: 6px;
+  position: relative;
+  top: 2px;
+  right: 6px;
+  /*padding-right: 8px;*/
 }
 
 .message p.subject {
