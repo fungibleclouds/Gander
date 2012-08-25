@@ -126,17 +126,6 @@ a.message-link {
   color: #777;
 }
 
-.folder-list-container {
-  display: none;
-  width: 25em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.folder-list-container.show {
-  display: block;
-}
-
 .button-ribbon {
   position: fixed;
   bottom: 0;
@@ -148,6 +137,8 @@ a.message-link {
 .button-list {
   margin: 0;
   padding: 0;
+  background-color: black;
+  height: ;
 }
 
 .button-list li {
@@ -156,7 +147,7 @@ a.message-link {
   float: left;
   text-align: center;
   width: 54px;
-  background-color: #CCC;
+  background-color: #DDD;
   border: 2px black solid;
   position: relative;
 }
@@ -166,11 +157,11 @@ a.message-link {
 }
 
 .button-list li p {
-  margin: 50px 0 2px 0;
+  margin: 40px 0 2px 0;
   text-decoration: none;
   overflow: hidden;
+  color: black;
   font-size: 1em;
-  font-weight: bold;
   font-family: Arial, sans-serif;
 }
 
@@ -202,4 +193,20 @@ a.message-link {
 
 .button-list .more .icon {
   background-position: -286px -96px;
+}
+
+.folder-list-container {
+  display: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.folder-list-container.show {
+  display: block;
+}
+
+.folder-list, .folder-list ol {
+  list-style-type: none;
+  font: 1.4em black Arial, sans-serif;
 }
