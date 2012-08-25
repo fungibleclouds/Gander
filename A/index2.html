@@ -97,12 +97,14 @@
         document.getElementById("password-helper-text").classList.remove('error');    
         document.getElementById("go").innerHTML="Create an Account";
         document.getElementById("log-in-password-field").disabled="disabled";
+        document.getElementById("forgot-password").classList.add("visibility-hidden");
       }
 
       function selectHasPasswordYes() {
         document.getElementById("go").innerHTML="Go";
         document.getElementById("has-password-yes").checked=true;
         document.getElementById("log-in-password-field").disabled="";
+        document.getElementById("forgot-password").classList.remove("visibility-hidden");
       }
 
       document.getElementById('go').onclick = function() {

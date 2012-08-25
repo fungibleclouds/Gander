@@ -60,7 +60,7 @@
               Please enter your password.
             </small>
             <input id='log-in-password-field' type="password" class="span3 optional-field" onclick="selectHasPasswordYes()" onfocus="selectHasPasswordYes()"/>
-            <a id='forgot-password' href="#">Forgot your password?</a>
+            <a id='forgot-password' href="#" class="">Forgot your password?</a>
             <a id='go' class='button' href="#">Go</a>
           </form>
       </div>
@@ -97,12 +97,14 @@
         document.getElementById("password-helper-text").classList.remove('error');    
         document.getElementById("go").innerHTML="Create an Account";
         document.getElementById("log-in-password-field").disabled="disabled";
+        document.getElementById("forgot-password").classList.add("visibility-hidden");
       }
 
       function selectHasPasswordYes() {
         document.getElementById("go").innerHTML="Go";
         document.getElementById("has-password-yes").checked=true;
         document.getElementById("log-in-password-field").disabled="";
+        document.getElementById("forgot-password").classList.remove("visibility-hidden");
       }
 
       document.getElementById('go').onclick = function() {
