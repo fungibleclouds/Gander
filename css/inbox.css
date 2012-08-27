@@ -17,7 +17,7 @@ h2.folder-header-wrapper {
 }
 
 a.folder-header {
-  color: #4444FF
+  color: black;
 }
 
 a.folder-header:hover {
@@ -73,6 +73,11 @@ a.folder-header:hover {
   background-image: url("../images/glyphicons.png");
 }
 
+.search-field-cell {
+  width: 100%;
+  margin: 0 4px;
+}
+
 .header-container .search-field {
   display: block;
   padding-left: 19px;
@@ -81,7 +86,7 @@ a.folder-header:hover {
 
   border: 2px solid black;
   border-radius: 4px;
-  width: 220px;
+  width: 90%;
   background-position: 3px 6px;
   background-image: url("../images/search-icon.png");
   background-repeat: no-repeat;
@@ -200,6 +205,8 @@ a.message-link {
   width: 16px;
   height: 16px;
   background-image: url("../images/glyphicons.png");  
+  opacity:0.4;
+  filter:alpha(opacity=40); /* For IE8 and earlier */
   position: absolute;
   right: 2px;
   bottom: 35px;
@@ -225,8 +232,9 @@ a.message-link {
   float: left;
   text-align: center;
   width: 54px;
-  background-color: #DDD;
+  background-color: #AAA;
   border: 2px black solid;
+  border-radius: 4px;
   position: relative;
 }
 
@@ -276,7 +284,7 @@ a.message-link {
 .folder-list-container {
   display: none;
   width: 100%;
-  margin: 10px auto 0 auto;
+  margin: 6px auto 0 auto;
 }
 
 .folder-list-container.show {
@@ -289,6 +297,7 @@ a.message-link {
 
 .folder-list li span:hover {
   color: blue;
+  cursor: pointer;
 }
 
 .folder-list, .folder-list ol {
@@ -297,4 +306,10 @@ a.message-link {
 
 footer .well {
   border-top: 2px solid black;
+  background-color: #DDD;
+  font-family: Arial, sans-serif;
+}
+
+footer .well a:hover {
+  text-decoration: none;
 }
