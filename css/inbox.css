@@ -23,7 +23,6 @@ a.folder-header {
 a.folder-header:hover {
   text-decoration: none;
   cursor: pointer;
-  color: #0000FF;
 }
 
 .folder-header-wrapper .arrow-icon {
