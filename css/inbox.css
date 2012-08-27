@@ -41,6 +41,29 @@ a.folder-header:hover {
   background-position: -287px -120px;
 }
 
+.sync-button, .settings-button {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+}
+
+.header-container .sync-button {
+  margin-left: 4px;
+  background-position: -234px -19px;
+  background-image: url("../images/glyphicons.png");
+}
+
+.header-container .settings-button {
+  float: right;
+  margin-right: 4px;
+  background-position: -426px 5px;
+  background-image: url("../images/glyphicons.png");
+}
+
 /*
 .button-ribbon-top {
   width: 100%;
@@ -88,13 +111,14 @@ a.folder-header:hover {
 */
 
 .header-container .search-field {
-  display: block;
+  display: inline-block;
   padding-left: 2em;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -16px;
   border: 2px solid black;
-  border-radius: 0em;
-  width: 20em;
+  border-radius: 4px;
+  width: 18em;
   background-position: 0.6em 0.4em;
   background-image: url("../images/search-icon.png");
   background-repeat: no-repeat;
@@ -115,7 +139,7 @@ table.message-list {
 }
 
 .message {
-  border-bottom: 1px solid #BBB;
+  border-bottom: 1px solid #EEE;
   width: 100%;
   min-width: 24em;
   height: 85px;
@@ -123,14 +147,22 @@ table.message-list {
   padding: 0;
 }
 
-.message.unread {
-  background-color: #EEEEFF;
-}
-
 .message .check-box-cell {
   width: 46px;
   padding: 0;
   position: relative;
+}
+
+.message .unread-marker {
+  visibility: hidden;
+  width: 30px;
+  height: 85px;
+  margin-left: 8px;
+  background-color: #CCCCFF;
+}
+
+.message.unread .unread-marker {
+  visibility: visible;
 }
 
 .message .message-check-box {
@@ -141,6 +173,7 @@ table.message-list {
   height: 16px;
   background-color: white;
   border: 2px solid black;
+  border-radius: 4px;
 }
 
 .message .message-check-box:hover {
@@ -268,8 +301,7 @@ a.message-link {
 .folder-list-container {
   display: none;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto 0 auto;
 }
 
 .folder-list-container.show {

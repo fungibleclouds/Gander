@@ -24,11 +24,11 @@
           </span>
         </h2>
         <div class="button-ribbon-top">
-          <!-- <div class="sync-button"></div> -->
+          <div class="sync-button"></div>
           <span class="search-field-cell">
             <input class="search-field" type="text" placeholder="search all your messages and folders"/>
           </span>
-          <!-- <div class="compose-button"></div> -->
+          <div class="settings-button"></div>
         </div>
       </div>
 
@@ -36,6 +36,7 @@
         <table class='message-list'>
           <tr class='message unread'>
             <td class='check-box-cell'>
+              <div class="unread-marker"></div>
               <div class="message-check-box"></div>
             </td>
             <td class='message-preview-cell'>
@@ -50,6 +51,7 @@
           </tr>
           <tr class='message unread'>
             <td class='check-box-cell'>
+              <div class="unread-marker"></div>
               <div class="message-check-box"></div>
             </td>
             <td class='message-preview-cell'>
@@ -63,6 +65,7 @@
           </tr>
           <tr class='message'>
             <td class='check-box-cell'>
+              <div class="unread-marker"></div>
               <div class="message-check-box"></div>
             </td>
             <td class='message-preview-cell'>
@@ -76,6 +79,7 @@
           </tr>
           <tr class='message unread'>
             <td class='check-box-cell'>
+              <div class="unread-marker"></div>
               <div class="message-check-box"></div>
             </td>
             <td class='message-preview-cell'>
@@ -89,6 +93,7 @@
           </tr>
           <tr class='message'>
             <td class='check-box-cell'>
+              <div class="unread-marker"></div>
               <div class="message-check-box"></div>
             </td>
             <td class='message-preview-cell'>
@@ -102,6 +107,7 @@
           </tr>
           <tr class='message'>
             <td class='check-box-cell'>
+              <div class="unread-marker"></div>
               <div class="message-check-box"></div>
             </td>
             <td class='message-preview-cell'>
@@ -115,6 +121,7 @@
           </tr>
           <tr class='message'>
             <td class='check-box-cell'>
+              <div class="unread-marker"></div>
               <div class="message-check-box"></div>
             </td>
             <td class='message-preview-cell'>
@@ -214,18 +221,21 @@
         $(".cancel").click(function() {
           $(".message-check-box").removeClass("selected");
           $(".button-ribbon").addClass("hidden");
+          numSelected = 0;
         });
 
         $(".trash").click(function() {
           $(".message-check-box").removeClass("selected");
           $(".message-check-box").parent().parent().addClass("hidden");
           $(".button-ribbon").addClass("hidden");
+          numSelected = 0;
         });
         
         $(".move").click(function() {
           $(".message-check-box").removeClass("selected");
           alert("Now you would choose a folder.");
           $(".button-ribbon").addClass("hidden");
+          numSelected = 0;
         });
         
         $(".mark").click(function() {
@@ -236,12 +246,14 @@
             }
           });
           $(".button-ribbon").addClass("hidden");
+          numSelected = 0;
         });
         
         $(".more").click(function() {
           $(".message-check-box").removeClass("selected");
           alert("Sorry, there aren't any more options yet.");
           $(".button-ribbon").addClass("hidden");
+          numSelected = 0;
         });
 
         $(".folder-header").click(function() {
