@@ -57,6 +57,10 @@ a.folder-header:hover {
   bottom: 135px; /* not sure why 135px... */
 }
 
+.sync-button:hover, .settings-button:hover {
+  cursor: pointer;
+}
+
 .header-container .sync-button {
   left: 3px;
   background-position: -234px -19px;
@@ -185,6 +189,7 @@ a.message-link {
 .message p.content {
   height: 32px;
   margin-top: -2px;
+  margin-right: 10px;
   line-height: 120%;
   color: #777;
 }

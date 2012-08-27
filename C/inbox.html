@@ -202,6 +202,15 @@
     <script type="text/javascript">
       $(document).ready(function() {
         var numSelected = 0;
+
+        $(".sync-button").click(function() {
+          alert("Syncing all messages and folders...");
+        });
+        
+        $(".settings-button").click(function() {
+          alert("Now you could view and update all your settings");
+        });
+        
         $(".message-check-box").click(function() {
           $(this).toggleClass("selected");
           
