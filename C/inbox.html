@@ -290,8 +290,9 @@
           $(".folder-list-container").toggleClass("show");
           $(".arrow-icon").toggleClass("flipped");
           
-          var position = $("#inbox-header").position();
-          scroll(0,position.top);
+          $('html, body').animate({
+            scrollTop: $("#inbox-header").offset().top
+          });
         });
 
         $(".folder").click(function() {
@@ -300,8 +301,9 @@
           $(".arrow-icon").toggleClass("flipped");
           $(".folder-header").html($(this).html());
 
-          var position = $("#inbox-header").position();
-          scroll(0,position.top);
+          $('html, body').animate({
+            scrollTop: $("#inbox-header").offset().top
+          });
         });
       });
     </script>
