@@ -177,7 +177,7 @@ a.message-link {
 .message p.date {
   position: absolute;
   top: 5px;
-  right: 6px;
+  right: 8px;
 }
 
 .message p.subject {
@@ -189,9 +189,20 @@ a.message-link {
 .message p.content {
   height: 32px;
   margin-top: -2px;
-  margin-right: 10px;
+  margin-right: 8px;
   line-height: 120%;
   color: #777;
+}
+
+.message-list .right-arrow {
+  background-repeat: no-repeat;
+  background-position: -455px -72px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/glyphicons.png");  
+  position: absolute;
+  right: 4px;
+  bottom: 35px;
 }
 
 .button-ribbon {
