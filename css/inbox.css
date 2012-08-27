@@ -53,8 +53,7 @@ a.folder-header:hover {
   border: 2px solid black;
   border-radius: 4px;
   background-repeat: no-repeat;
-  position: absolute;
-  bottom: 135px; /* not sure why 135px... */
+  margin: -36px 6px 0 6px;
 }
 
 .sync-button:hover, .settings-button:hover {
@@ -62,20 +61,20 @@ a.folder-header:hover {
 }
 
 .header-container .sync-button {
-  left: 3px;
+  float: left;
   background-position: -234px -19px;
   background-image: url("../images/glyphicons.png");
 }
 
 .header-container .settings-button {
-  right: 3px;
-  background-position: -426px 5px;
+  float: right;
+  background-position: -426px 6px;
   background-image: url("../images/glyphicons.png");
 }
 
 .search-field-cell {
-  width: 100%;
-  margin: 0 4px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .header-container .search-field {
@@ -83,7 +82,8 @@ a.folder-header:hover {
   padding-left: 19px;
   margin-left: auto;
   margin-right: auto;
-
+  margin-bottom: 6px;
+  
   border: 2px solid black;
   border-radius: 4px;
   width: 90%;

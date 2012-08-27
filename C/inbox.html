@@ -23,12 +23,14 @@
             <div class="arrow-icon"></div>
           </span>
         </h2>
+        <div class="sync-button"></div>
+        <div class="settings-button"></div>
         <div class="button-ribbon-top">
-          <span class="search-field-cell">
+          <div class="search-field-cell">
             <input class="search-field" type="text" placeholder="search all your messages and folders"/>
-          </span>
-          <!-- <div class="sync-button"></div>
-          <div class="settings-button"></div> -->
+          </div>
+          <!-- 
+           -->
         </div>
       </div>
 
@@ -49,7 +51,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message unread'>
+          <tr class='message unread' id='message1'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -208,7 +210,15 @@
     <script type="text/javascript">
       $(document).ready(function() {
         var numSelected = 0;
-
+        var window_width = $(window).width()-38;
+        
+        $(".search-field").width(window_width);
+        
+        $(window).resize(function() {
+          window_width = $(window).width()-38;
+          $(".search-field").width(window_width); 
+        });
+        
         $(".sync-button").click(function() {
           alert("Syncing all messages and folders...");
         });
@@ -240,8 +250,12 @@
         });
 
         $(".trash").click(function() {
-          $(".message-check-box").removeClass("selected");
-          $(".message-check-box").parent().parent().addClass("hidden");
+          $(".message-check-box").each(function() {
+            if ($(this).hasClass("selected")) {
+              $(this).removeClass("selected");
+              $(this).parent().parent().remove();            
+            }
+          });
           $(".button-ribbon").addClass("hidden");
           numSelected = 0;
         });
