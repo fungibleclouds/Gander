@@ -52,7 +52,7 @@ a.folder-header:hover {
   border: 2px solid black;
   border-radius: 4px;
   background-repeat: no-repeat;
-  margin: -36px 6px 0 6px;
+  margin: -34px 6px 0 6px;
 }
 
 .sync-button:hover, .settings-button:hover {
