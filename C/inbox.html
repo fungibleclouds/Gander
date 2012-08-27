@@ -29,8 +29,6 @@
           <div class="search-field-cell">
             <input class="search-field" type="text" placeholder="search all your messages and folders"/>
           </div>
-          <!-- 
-           -->
         </div>
       </div>
 
@@ -210,12 +208,12 @@
     <script type="text/javascript">
       $(document).ready(function() {
         var numSelected = 0;
-        var window_width = $(window).width()-38;
+        var window_width = $(window).width()-46;
         
         $(".search-field").width(window_width);
         
         $(window).resize(function() {
-          window_width = $(window).width()-38;
+          window_width = $(window).width()-46;
           $(".search-field").width(window_width); 
         });
         
@@ -289,10 +287,6 @@
           $(".message-list-container").slideToggle("slow");
           $(".folder-list-container").toggleClass("show");
           $(".arrow-icon").toggleClass("flipped");
-          
-          $('html, body').animate({
-            scrollTop: $("#inbox-header").offset().top
-          });
         });
 
         $(".folder").click(function() {
@@ -300,10 +294,6 @@
           $(".folder-list-container").toggleClass("show");
           $(".arrow-icon").toggleClass("flipped");
           $(".folder-header").html($(this).html());
-
-          $('html, body').animate({
-            scrollTop: $("#inbox-header").offset().top
-          });
         });
       });
     </script>
@@ -314,7 +304,7 @@
       }
       
       function scrollToLogo() {
-        document.getElementById("inbox-header").scrollIntoView();
+        document.getElementById("container").scrollIntoView();
       }
     </script>
    

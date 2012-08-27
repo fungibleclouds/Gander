@@ -11,8 +11,10 @@
 }
 
 h2.folder-header-wrapper {
+  font-size: 1.8em;
+  font-family: Arial, sans-serif;  
   display: block;
-  margin: 0;
+  margin: 2px 0 0 0;
   padding: 0;
 }
 
@@ -46,13 +48,13 @@ a.folder-header:hover {
 
 .sync-button, .settings-button {
   display: block;
-  width: 26px;
-  height: 26px;
+  width: 32px;
+  height: 32px;
   background-color: white;
   border: 2px solid black;
   border-radius: 4px;
   background-repeat: no-repeat;
-  margin: -34px 6px 0 6px;
+  margin: -36px 8px 8px 8px;
 }
 
 .sync-button:hover, .settings-button:hover {
@@ -61,32 +63,31 @@ a.folder-header:hover {
 
 .header-container .sync-button {
   float: left;
-  background-position: -234px -19px;
+  background-position: -231px -16px;
   background-image: url("../images/glyphicons.png");
 }
 
 .header-container .settings-button {
   float: right;
-  background-position: -426px 6px;
+  background-position: -423px 8px;
   background-image: url("../images/glyphicons.png");
 }
 
 .search-field-cell {
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .header-container .search-field {
   display: block;
-  padding-left: 19px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 6px;
-  
+  padding-left: 22px;
+  margin: 0 auto 6px auto;
   border: 2px solid black;
   border-radius: 4px;
   width: 90%;
-  background-position: 3px 6px;
+  height: 22px;
+  font-size: 1.2em;
+  background-position: 5px 7px;
   background-image: url("../images/search-icon.png");
   background-repeat: no-repeat;
 }
