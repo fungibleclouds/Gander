@@ -289,7 +289,9 @@
           $(".message-list-container").slideToggle("slow");
           $(".folder-list-container").toggleClass("show");
           $(".arrow-icon").toggleClass("flipped");
-          scrollToLogo();
+          
+          var position = $("#inbox-header").position();
+          scroll(0,position.top);
         });
 
         $(".folder").click(function() {
@@ -297,7 +299,9 @@
           $(".folder-list-container").toggleClass("show");
           $(".arrow-icon").toggleClass("flipped");
           $(".folder-header").html($(this).html());
-          scrollToLogo();
+
+          var position = $("#inbox-header").position();
+          scroll(0,position.top);
         });
       });
     </script>
