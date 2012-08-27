@@ -177,7 +177,7 @@ a.message-link {
 .message p.date {
   position: absolute;
   top: 5px;
-  right: 8px;
+  right: 12px;
 }
 
 .message p.subject {
@@ -189,7 +189,7 @@ a.message-link {
 .message p.content {
   height: 32px;
   margin-top: -2px;
-  margin-right: 8px;
+  margin-right: 14px;
   line-height: 120%;
   color: #777;
 }
@@ -201,7 +201,7 @@ a.message-link {
   height: 16px;
   background-image: url("../images/glyphicons.png");  
   position: absolute;
-  right: 4px;
+  right: 2px;
   bottom: 35px;
 }
 
