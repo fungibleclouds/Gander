@@ -2,8 +2,18 @@
   display: none;
 }
 
+.header-container {
+  width: 100%;
+  background-color: #DDD;
+  padding-bottom: 0px;
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
+}
+
 h2.folder-header-wrapper {
-  margin: 0;
+  display: block;
+  margin: -4px 0;
+  padding: 0;
 }
 
 a.folder-header {
@@ -15,6 +25,64 @@ a.folder-header:hover {
   cursor: pointer;
   color: #0000FF;
 }
+/*
+.button-ribbon-top {
+  width: 100%;
+  display: table;
+}
+
+.sync-button, .compose-button {
+  display: table-cell;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border: 2px solid black;
+  background-repeat: no-repeat;
+}
+
+.button-ribbon-top .search-field-cell {
+  display: table-cell;
+  width: 100%;
+  padding: 0px 0px;
+}
+
+.header-container .compose-button {
+  padding-left: 24px;
+  background-position: -89px -66px;
+  background-image: url("../images/glyphicons.png");
+}
+
+.header-container .sync-button {
+  background-position: -89px -66px;
+  background-image: url("../images/glyphicons.png");
+}
+
+.header-container .search-field {
+  width: 100%;
+  
+  padding-left: 2em;
+  margin-bottom: 5px;
+
+  border: 2px solid black;
+  border-radius: 0em;
+  background-position: 0.6em 0.4em;
+  background-image: url("../images/search-icon.png");
+  background-repeat: no-repeat;
+}
+*/
+
+.header-container .search-field {
+  display: block;
+  padding-left: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  border-radius: 0em;
+  width: 20em;
+  background-position: 0.6em 0.4em;
+  background-image: url("../images/search-icon.png");
+  background-repeat: no-repeat;
+}
 
 .message-list-container {
   width: 100%;
@@ -23,22 +91,8 @@ a.folder-header:hover {
   padding-bottom: 1.1em;
 }
 
-.message-list-container .search-field {
-  display: block;
-  padding-left: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid black;
-  border-radius: 1em;
-  width: 20em;
-  background-position: 0.6em 0.4em;
-  background-image: url("../images/search-icon.png");
-  background-repeat: no-repeat;
-}
-
 table.message-list {
-  margin: 0;
-  margin: 4px auto 2em auto;
+  margin: 0 auto 2em auto;
   border-top: 1px solid #BBB;
   width: 100%;
   background-color: white;
@@ -48,7 +102,7 @@ table.message-list {
   border-bottom: 1px solid #BBB;
   width: 100%;
   min-width: 24em;
-  height: 75px;
+  height: 85px;
   margin: 0;
   padding: 0;
 }
@@ -65,7 +119,7 @@ table.message-list {
 
 .message .message-check-box {
   position: absolute;
-  top: 27px;
+  top: 32px;
   left: 13px;
   width: 16px;
   height: 16px;
@@ -110,7 +164,7 @@ a.message-link {
 
 .message p.date {
   position: absolute;
-  top: 2px;
+  top: 5px;
   right: 6px;
 }
 
@@ -121,8 +175,9 @@ a.message-link {
 }
 
 .message p.content {
-  height: 30px;
-  line-height: 110%;
+  height: 32px;
+  margin-top: -2px;
+  line-height: 120%;
   color: #777;
 }
 
@@ -138,7 +193,6 @@ a.message-link {
   margin: 0;
   padding: 0;
   background-color: black;
-  height: ;
 }
 
 .button-list li {
@@ -208,5 +262,9 @@ a.message-link {
 
 .folder-list, .folder-list ol {
   list-style-type: none;
-  font: 1.4em black Arial, sans-serif;
+  font: 18px black Arial, sans-serif;
+}
+
+footer .well {
+  border-top: 2px solid black;
 }

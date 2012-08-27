@@ -15,17 +15,23 @@
   <body onload="onLoadFunctions()">
 
     <div id='container'>
-      <h2 class="folder-header-wrapper"> 
-        <span>
-          <a class="folder-header" type="button" id="inbox-header">inbox</a>
-        </span>
-      </h2>
+    
+      <div class="header-container">
+        <h2 class="folder-header-wrapper"> 
+          <span>
+            <a class="folder-header" type="button" id="inbox-header">inbox</a>
+          </span>
+        </h2>
+        <div class="button-ribbon-top">
+          <!-- <div class="sync-button"></div> -->
+          <span class="search-field-cell">
+            <input class="search-field" type="text" placeholder="search all your messages and folders"/>
+          </span>
+          <!-- <div class="compose-button"></div> -->
+        </div>
+      </div>
 
       <div class='message-list-container'>
-        <div class='search-bar-container'>
-          <input class='search-field' type="text" placeholder="search all your messages and folders"/>
-        </div>
-  
         <table class='message-list'>
           <tr class='message unread'>
             <td class='check-box-cell'>
@@ -74,7 +80,7 @@
             <td class='message-preview-cell'>
               <a href="../A/index.html" class="message-link">
                 <p class='from'>Gander</p>
-                <p class='date'>August 1</p>
+                <p class='date'>March 12</p>
                 <p class='subject'>Gander is the bomb.</p>
                 <p class='content'>Check out everything Gander can do. Scroll down and click the features tab...</p>
               </a>
@@ -87,7 +93,7 @@
             <td class='message-preview-cell'>
               <a href="../A/index.html" class="message-link">
                 <p class='from'>Gander</p>
-                <p class='date'>March 12</p>
+                <p class='date'>4/18/11</p>
                 <p class='subject'>Gander is the bomb.</p>
                 <p class='content'>Check out everything Gander can do. Scroll down and click the features tab...</p>
               </a>
