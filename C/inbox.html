@@ -19,7 +19,8 @@
       <div class="header-container">
         <h2 class="folder-header-wrapper"> 
           <span>
-            <a class="folder-header" type="button" id="inbox-header">inbox</a>
+            <a class="folder-header" type="button" id="inbox-header">Inbox</a>
+            <div class="arrow-icon"></div>
           </span>
         </h2>
         <div class="button-ribbon-top">
@@ -38,7 +39,7 @@
               <div class="message-check-box"></div>
             </td>
             <td class='message-preview-cell'>
-              <a href="../A/index.html" class="message-link">
+              <a href="#" class="message-link">
                 <p class='from'>Gander</p>
                 <p class='date'>5:44pm</p>
                 <p class='subject'>Get started with Gander</p>
@@ -156,22 +157,25 @@
       
       <div class="folder-list-container">
         <ol class="folder-list" style="">
-          <li>Inbox</li>
-          <li>Sent Items</li>
-          <li>Drafts</li>
-          <li>Travel
+          <li><span class="folder">Inbox</span></li>
+          <li><span class="folder">Sent Items</span></li>
+          <li><span class="folder">Drafts</span></li>
+          <li><span class="folder">Priority</span>
+          <li><span class="folder">Travel</span>
             <ol>
-              <li>Flight Tickets</li>
-              <li>Resort Coupons</li>
+              <li><span class="folder">Flight Tickets</span></li>
+              <li><span class="folder">Resort Coupons</span></li>
             </ol>
           </li>
-          <li>Business
+          <li><span class="folder">Business</span>
             <ol>
-              <li>Meeting Notes</li>
-              <li>Customer Feedback</li>
-              <li>Archive</li>
+              <li><span class="folder">Meeting Notes</span></li>
+              <li><span class="folder">Customer Feedback</span></li>
+              <li><span class="folder">Archive</span></li>
             </ol>
           </li>
+          <li><span class="folder">Spam</span>
+          <li><span class="folder">Reports</span>
         </ol>
       </div>
       
@@ -239,10 +243,18 @@
           alert("Sorry, there aren't any more options yet.");
           $(".button-ribbon").addClass("hidden");
         });
-        
+
         $(".folder-header").click(function() {
           $(".message-list-container").slideToggle("slow");
           $(".folder-list-container").toggleClass("show");
+          $(".arrow-icon").toggleClass("flipped");
+        });
+
+        $(".folder").click(function() {
+          $(".message-list-container").slideToggle("slow");
+          $(".folder-list-container").toggleClass("show");
+          $(".arrow-icon").toggleClass("flipped");
+          $(".folder-header").html($(this).html());
         });
       });
     </script>

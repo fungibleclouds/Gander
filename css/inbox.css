@@ -12,7 +12,7 @@
 
 h2.folder-header-wrapper {
   display: block;
-  margin: -4px 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -25,6 +25,22 @@ a.folder-header:hover {
   cursor: pointer;
   color: #0000FF;
 }
+
+.folder-header-wrapper .arrow-icon {
+  background-repeat: no-repeat; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+  width: 16px;
+  height: 16px;
+  background-position: -311px -120px;
+  background-image: url("../images/glyphicons.png");   
+}
+
+.folder-header-wrapper .arrow-icon.flipped {
+  background-position: -287px -120px;
+}
+
 /*
 .button-ribbon-top {
   width: 100%;
@@ -260,9 +276,16 @@ a.message-link {
   display: block;
 }
 
+.folder-list li span {
+  font: 18px/30px black Arial, sans-serif;
+}
+
+.folder-list li span:hover {
+  color: blue;
+}
+
 .folder-list, .folder-list ol {
   list-style-type: none;
-  font: 18px black Arial, sans-serif;
 }
 
 footer .well {
