@@ -41,85 +41,44 @@ a.folder-header:hover {
   background-position: -287px -120px;
 }
 
+.button-ribbon-top {
+  display: relative;
+}
+
 .sync-button, .settings-button {
-  display: inline-block;
+  display: block;
   width: 26px;
   height: 26px;
   background-color: white;
   border: 2px solid black;
   border-radius: 4px;
   background-repeat: no-repeat;
+  position: absolute;
+  bottom: 135px; /* not sure why 135px... */
 }
 
 .header-container .sync-button {
-  margin-left: 4px;
+  left: 3px;
   background-position: -234px -19px;
   background-image: url("../images/glyphicons.png");
 }
 
 .header-container .settings-button {
-  float: right;
-  margin-right: 4px;
+  right: 3px;
   background-position: -426px 5px;
   background-image: url("../images/glyphicons.png");
 }
 
-/*
-.button-ribbon-top {
-  width: 100%;
-  display: table;
-}
-
-.sync-button, .compose-button {
-  display: table-cell;
-  width: 26px;
-  height: 26px;
-  background-color: white;
-  border: 2px solid black;
-  background-repeat: no-repeat;
-}
-
-.button-ribbon-top .search-field-cell {
-  display: table-cell;
-  width: 100%;
-  padding: 0px 0px;
-}
-
-.header-container .compose-button {
-  padding-left: 24px;
-  background-position: -89px -66px;
-  background-image: url("../images/glyphicons.png");
-}
-
-.header-container .sync-button {
-  background-position: -89px -66px;
-  background-image: url("../images/glyphicons.png");
-}
-
 .header-container .search-field {
-  width: 100%;
-  
-  padding-left: 2em;
-  margin-bottom: 5px;
-
-  border: 2px solid black;
-  border-radius: 0em;
-  background-position: 0.6em 0.4em;
-  background-image: url("../images/search-icon.png");
-  background-repeat: no-repeat;
-}
-*/
-
-.header-container .search-field {
-  display: inline-block;
-  padding-left: 2em;
+  display: block;
+  padding-left: 19px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -16px;
+
   border: 2px solid black;
   border-radius: 4px;
-  width: 18em;
-  background-position: 0.6em 0.4em;
+  width: 220px;
+  background-position: 3px 6px;
   background-image: url("../images/search-icon.png");
   background-repeat: no-repeat;
 }
