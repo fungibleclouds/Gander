@@ -267,7 +267,7 @@
         });
         
         $(".folders-button").click(function() {
-          $(".message-list-container").slideToggle();
+          $(".message-list-container").toggle();
           $(".folder-list-container").toggle();
           $(".arrow-icon").toggleClass("flipped");
           if ($(".folders-button-label").html() == "folders") {
