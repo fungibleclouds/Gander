@@ -268,7 +268,7 @@
         
         $(".folders-button").click(function() {
           $(".folder-list-container").toggleClass("show");
-          $(".message-list-container").toggleClass("show");
+          $(".message-list-container").slideToggle("slow");
           $(".arrow-icon").toggleClass("flipped");
           if ($(".folders-button-label").html() == "folders") {
             $(".folders-button-label").html("back");
@@ -358,8 +358,8 @@
         });
 
         $(".folder-header").click(function() {
-          /*$(".message-list-container").slideToggle("slow");
-          $(".folder-list-container").toggleClass("show");*/
+          $(".message-list-container").slideToggle("slow");
+          $(".folder-list-container").toggleClass("show");
           $(".arrow-icon").toggleClass("flipped");
           if ($(".folders-button-label").html() == "folders") {
             $(".folders-button-label").html("back");
@@ -370,8 +370,8 @@
         });
 
         $(".folder").click(function() {
-          /*$(".message-list-container").slideToggle("slow");
-          $(".folder-list-container").toggleClass("show");*/
+          $(".message-list-container").slideToggle("slow");
+          $(".folder-list-container").toggleClass("show");
           $(".arrow-icon").toggleClass("flipped");
           $(".folder-header").html($(this).html());
           if ($(".folders-button-label").html() == "folders") {
