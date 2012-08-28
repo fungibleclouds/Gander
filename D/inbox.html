@@ -18,7 +18,7 @@
         <h2 class="folder-header-wrapper"> 
           <span>
             <a class="folder-header" type="button" id="inbox-header">Inbox</a>
-            <div class="arrow-icon"></div>
+            <div style="visibility:hidden" class="arrow-icon"></div>
           </span>
         </h2>
         <div class="folders-button"><p class="folders-button-label">folders</p></div>
@@ -34,13 +34,15 @@
         <table class='message-list'>
           <tr class='message unread'>
             <td class='check-box-cell hidden'>
-              <div class="message-check-box"></div>
+              <a class='check-box-clickable' href="#">
+                <div class="message-check-box"></div>
+              </a>
             </td>
             <td class='unread-marker-cell'>
                <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
-              <a href="../success-message.html" class="message-link">
+              <a href="success-message.html" class="message-link">
                 <p class='from'>Gander</p>
                 <p class='date'>5:44pm</p>
                 <p class='subject'>Get started with Gander</p>
@@ -57,7 +59,7 @@
                <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
-              <a href="../success-message.html" class="message-link">
+              <a href="success-message.html" class="message-link">
                 <p class='from'>Gander</p>
                 <p class='date'>Yesterday</p>
                 <p class='subject'>Gander is the bomb.</p>
@@ -74,7 +76,7 @@
                <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
-              <a href="../success-message.html" class="message-link">
+              <a href="success-message.html" class="message-link">
                 <p class='from'>news@gander.com</p>
                 <p class='date'>August 3</p>
                 <p class='subject'>Gander Revolutionizes Email Experience.</p>
@@ -91,7 +93,7 @@
                <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
-              <a href="../success-message.html" class="message-link">
+              <a href="success-message.html" class="message-link">
                 <p class='from'>friend@gmail.com</p>
                 <p class='date'>March 12</p>
                 <p class='subject'>Wanna grab lunch?</p>
@@ -108,7 +110,7 @@
                <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
-              <a href="../success-message.html" class="message-link">
+              <a href="success-message.html" class="message-link">
                 <p class='from'>no-reply@ecards.com</p>
                 <p class='date'>4/18/11</p>
                 <p class='subject'>Happy birthday!</p>
@@ -125,7 +127,7 @@
                <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
-              <a href="../success-message.html" class="message-link">
+              <a href="success-message.html" class="message-link">
                 <p class='from'>Gander</p>
                 <p class='date'>3/2/10</p>
                 <p class='subject'>Welcome to Gander!</p>
@@ -142,7 +144,7 @@
                <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
-              <a href="../success-message.html" class="message-link">
+              <a href="success-message.html" class="message-link">
                 <p class='from'>Gander</p>
                 <p class='date'>3/2/10</p>
                 <p class='subject'>Gander is the bomb.</p>
@@ -159,7 +161,7 @@
                <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
-              <a href="../success-message.html" class="message-link">
+              <a href="success-message.html" class="message-link">
                 <p class='from'>Gander</p>
                 <p class='date'>3/2/10</p>
                 <p class='subject'>Gander is the bomb.</p>
@@ -280,8 +282,13 @@
         
         $(".edit-button").click(function() {
           $(".check-box-cell").toggleClass("hidden");
-          $(".check-box-cell").toggleClass("edit-mode");
-          $(".message-preview-cell").toggleClass("expanded");
+          $(".check-box-cell").toggleClass("edit-mode"); /* remove duplicate! */
+          $(".message").toggleClass("edit-mode");
+          $(".right-arrow").toggle();
+        });
+        
+        $(".unread-marker").click(function() {
+          alert("hi!");
         });
         
         $(".message-check-box").click(function() {
@@ -370,7 +377,7 @@
         });
 
         $(".folder").click(function() {
-          $(".message-list-container").slideToggle();
+          $(".message-list-container").toggle();
           $(".folder-list-container").toggle();
           $(".arrow-icon").toggleClass("flipped");
           $(".folder-header").html($(this).html());
