@@ -96,14 +96,14 @@
         document.getElementById("email-helper-text").classList.remove('error');
         document.getElementById("password-helper-text").classList.remove('error');    
         document.getElementById("go").innerHTML="Create an Account";
-        document.getElementById("log-in-password-field").disabled="disabled";
+        document.getElementById("log-in-password-field").classList.add("visibility-hidden");
         document.getElementById("forgot-password").classList.add("visibility-hidden");
       }
 
       function selectHasPasswordYes() {
         document.getElementById("go").innerHTML="Go";
         document.getElementById("has-password-yes").checked=true;
-        document.getElementById("log-in-password-field").disabled="";
+        document.getElementById("log-in-password-field").classList.remove("visibility-hidden");
         document.getElementById("forgot-password").classList.remove("visibility-hidden");
       }
 
