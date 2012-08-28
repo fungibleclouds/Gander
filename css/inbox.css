@@ -34,12 +34,12 @@ a.folder-header:hover {
   margin-top: -10px;
   width: 16px;
   height: 16px;
-  background-position: -311px -120px;
+  background-position: -311px -118px;
   background-image: url("../images/glyphicons.png");   
 }
 
 .folder-header-wrapper .arrow-icon.flipped {
-  background-position: -287px -120px;
+  background-position: -287px -116px;
 }
 
 .button-ribbon-top {
