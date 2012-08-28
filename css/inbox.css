@@ -307,30 +307,29 @@ a.message-link {
 }
 
 .scroll-up-button {
-  width: 24px;
-  height: 36px;
+  width: 32px;
+  height: 48px;
   border: 2px black solid;
   border-radius: 4px;
   position: fixed;
   bottom: 0;
-  right: 5px;
+  right: 8px;
   background-image: url("../images/doublearrow-icon.png");
   background-repeat: no-repeat;
-  background-position: 6px 9px;
+  background-position: 10px 14px;
 }
 
 .scroll-up-background {
   width: 100%;
   height: 100%;
   background-color: #CCC;
-  opacity: 0.4;
-  filter: alpha(opacity=40); /* For IE8 and earlier */
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
 
 }
 
-.scroll-up-button:hover {
+.scroll-up-background:hover {
   cursor: pointer;
-  background-color: #AAA;
 }
 
 .scroll-up-button .top-arrow-icon {
