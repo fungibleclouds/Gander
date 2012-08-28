@@ -71,10 +71,10 @@
             </td>
             <td class='message-preview-cell'>
               <a href="../success-message.html" class="message-link">
-                <p class='from'>Gander</p>
+                <p class='from'>news@gander.com</p>
                 <p class='date'>August 3</p>
-                <p class='subject'>Gander is the bomb.</p>
-                <p class='content'>Check out everything Gander can do. Scroll down and click the features tab...</p>
+                <p class='subject'>Gander Revolutionizes Email Experience.</p>
+                <p class='content'>Initial press releases suggest Gander will change the way we think of email for years to come.</p>
                 <div class="right-arrow"></div>
               </a>
             </td>
@@ -86,10 +86,10 @@
             </td>
             <td class='message-preview-cell'>
               <a href="../success-message.html" class="message-link">
-                <p class='from'>Gander</p>
+                <p class='from'>friend@gmail.com</p>
                 <p class='date'>March 12</p>
-                <p class='subject'>Gander is the bomb.</p>
-                <p class='content'>Check out everything Gander can do. Scroll down and click the features tab...</p>
+                <p class='subject'>Wanna grab lunch?</p>
+                <p class='content'>I heard there is a new sushi restaurant in Watertown Square. Are you free at 12:30pm?</p>
                 <div class="right-arrow"></div>
               </a>
             </td>
@@ -101,10 +101,10 @@
             </td>
             <td class='message-preview-cell'>
               <a href="../success-message.html" class="message-link">
-                <p class='from'>Gander</p>
+                <p class='from'>no-reply@ecards.com</p>
                 <p class='date'>4/18/11</p>
-                <p class='subject'>Gander is the bomb.</p>
-                <p class='content'>Check out everything Gander can do. Scroll down and click the features tab...</p>
+                <p class='subject'>Happy birthday!</p>
+                <p class='content'>Click below to open your birthday e-card from your brother. Best wishes for a great day!</p>
                 <div class="right-arrow"></div>
               </a>
             </td>
@@ -192,6 +192,10 @@
         </ol>
       </div>
       
+      <div class="scroll-up-button hidden">
+        <div class="scroll-up-background"></div>
+      </div>
+      
       <div id='push'><!--//--></div>
       
     </div>
@@ -236,6 +240,7 @@
           
           if (numSelected > 0) {
             $(".button-ribbon").removeClass("hidden");
+            $(".scroll-up-button").addClass("hidden");
           } else {
             $(".button-ribbon").addClass("hidden");
           }
@@ -281,6 +286,18 @@
           alert("Sorry, there aren't any more options yet.");
           $(".button-ribbon").addClass("hidden");
           numSelected = 0;
+        });
+
+        $(".scroll-up-button").click(function() {
+          window.scrollTo(0, 0);
+        });
+
+        $(window).scroll(function() {
+           if (window.pageYOffset < $(".message-list-container").offset().top || numSelected > 0) {
+            $(".scroll-up-button").addClass("hidden");
+           } else {
+            $(".scroll-up-button").removeClass("hidden");
+          }
         });
 
         $(".folder-header").click(function() {
