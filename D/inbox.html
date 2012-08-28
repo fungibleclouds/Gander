@@ -280,19 +280,15 @@
         
         $(".edit-button").click(function() {
           $(".check-box-cell").toggleClass("hidden");
-          $(".check-box-cell").toggleClass("edit-mode"); /* remove duplicate! */
+          $(".check-box-cell").toggleClass("edit-mode");
           $(".message").toggleClass("edit-mode");
           $(".right-arrow").toggle();
         });
         
-        $(".unread-marker").click(function() {
-          alert("hi!");
-        });
-        
-        $(".message-check-box").click(function() {
-          $(this).toggleClass("selected");
+        $(".message").click(function(event) {
+          $(this).find(".message-check-box").toggleClass("selected");
           
-          if ($(this).hasClass("selected")) {
+          if ($(this).find(".message-check-box").hasClass("selected")) {
             numSelected++;
           } else {
             numSelected--;
@@ -303,7 +299,8 @@
             $(".scroll-up-button").addClass("hidden");
           } else {
             $(".button-ribbon").addClass("hidden");
-          }
+          }          
+          event.preventDefault();
         });
         
         $(".cancel").click(function() {
