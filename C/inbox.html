@@ -319,6 +319,7 @@
           $(".message-list-container").slideToggle("slow");
           $(".folder-list-container").toggleClass("show");
           $(".arrow-icon").toggleClass("flipped");
+          window.scrollTo(0, $(".container").offset().top);
         });
 
         $(".folder").click(function() {
@@ -326,6 +327,7 @@
           $(".folder-list-container").toggleClass("show");
           $(".arrow-icon").toggleClass("flipped");
           $(".folder-header").html($(this).html());
+          window.scrollTo(0, $(".container").offset().top);
         });
       });
     </script>
