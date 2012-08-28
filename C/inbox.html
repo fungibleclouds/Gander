@@ -308,7 +308,9 @@
         });
 
         $(window).scroll(function() {
-           if (window.pageYOffset == 0 || numSelected > 0) {
+           if (window.pageYOffset == 0 ||
+              $(window).scrollTop() + $(window).height() == $(document).height() ||
+              numSelected > 0) {
             $(".scroll-up-button").addClass("hidden");
            } else {
             $(".scroll-up-button").removeClass("hidden");

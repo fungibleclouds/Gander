@@ -308,15 +308,17 @@ a.message-link {
 
 .scroll-up-button {
   width: 32px;
-  height: 48px;
+  height: 32px;
   border: 2px black solid;
-  border-radius: 4px;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   position: fixed;
   bottom: 0;
   right: 8px;
   background-image: url("../images/doublearrow-icon.png");
   background-repeat: no-repeat;
-  background-position: 10px 14px;
+  background-position: 10px 10px;
 }
 
 .scroll-up-background {
@@ -325,7 +327,6 @@ a.message-link {
   background-color: #CCC;
   opacity: 0.5;
   filter: alpha(opacity=50); /* For IE8 and earlier */
-
 }
 
 .scroll-up-background:hover {
