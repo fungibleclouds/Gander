@@ -308,7 +308,7 @@
         });
 
         $(window).scroll(function() {
-           if (window.pageYOffset < $(".message-list-container").offset().top || numSelected > 0) {
+           if (window.pageYOffset == 0 || numSelected > 0) {
             $(".scroll-up-button").addClass("hidden");
            } else {
             $(".scroll-up-button").removeClass("hidden");
@@ -319,7 +319,7 @@
           $(".message-list-container").slideToggle("slow");
           $(".folder-list-container").toggleClass("show");
           $(".arrow-icon").toggleClass("flipped");
-          window.scrollTo(0, $(".container").offset().top);
+          window.scrollTo(0, $(".message-list").offset().top);
         });
 
         $(".folder").click(function() {
@@ -327,7 +327,7 @@
           $(".folder-list-container").toggleClass("show");
           $(".arrow-icon").toggleClass("flipped");
           $(".folder-header").html($(this).html());
-          window.scrollTo(0, $(".container").offset().top);
+          window.scrollTo(0, $(".message-list").offset().top);
         });
       });
     </script>
