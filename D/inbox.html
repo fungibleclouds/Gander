@@ -33,9 +33,11 @@
       <div class='message-list-container'>
         <table class='message-list'>
           <tr class='message unread'>
-            <td class='check-box-cell'>
-              <div class="unread-marker"></div>
+            <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
+            </td>
+            <td class='unread-marker-cell'>
+               <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
               <a href="../success-message.html" class="message-link">
@@ -48,9 +50,11 @@
             </td>
           </tr>
           <tr class='message unread' id='message1'>
-            <td class='check-box-cell'>
-              <div class="unread-marker"></div>
+            <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
+            </td>
+            <td class='unread-marker-cell'>
+               <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
               <a href="../success-message.html" class="message-link">
@@ -63,9 +67,11 @@
             </td>
           </tr>
           <tr class='message'>
-            <td class='check-box-cell'>
-              <div class="unread-marker"></div>
+            <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
+            </td>
+            <td class='unread-marker-cell'>
+               <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
               <a href="../success-message.html" class="message-link">
@@ -78,9 +84,11 @@
             </td>
           </tr>
           <tr class='message unread'>
-            <td class='check-box-cell'>
-              <div class="unread-marker"></div>
+            <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
+            </td>
+            <td class='unread-marker-cell'>
+               <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
               <a href="../success-message.html" class="message-link">
@@ -93,9 +101,11 @@
             </td>
           </tr>
           <tr class='message'>
-            <td class='check-box-cell'>
-              <div class="unread-marker"></div>
+            <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
+            </td>
+            <td class='unread-marker-cell'>
+               <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
               <a href="../success-message.html" class="message-link">
@@ -108,9 +118,11 @@
             </td>
           </tr>
           <tr class='message'>
-            <td class='check-box-cell'>
-              <div class="unread-marker"></div>
+            <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
+            </td>
+            <td class='unread-marker-cell'>
+               <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
               <a href="../success-message.html" class="message-link">
@@ -123,9 +135,11 @@
             </td>
           </tr>
           <tr class='message'>
-            <td class='check-box-cell'>
-              <div class="unread-marker"></div>
+            <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
+            </td>
+            <td class='unread-marker-cell'>
+               <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
               <a href="../success-message.html" class="message-link">
@@ -138,9 +152,11 @@
             </td>
           </tr>
           <tr class='message'>
-            <td class='check-box-cell'>
-              <div class="unread-marker"></div>
+            <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
+            </td>
+            <td class='unread-marker-cell'>
+               <div class="unread-marker"></div>
             </td>
             <td class='message-preview-cell'>
               <a href="../success-message.html" class="message-link">
@@ -264,6 +280,7 @@
         
         $(".edit-button").click(function() {
           $(".check-box-cell").toggleClass("hidden");
+          $(".check-box-cell").toggleClass("edit-mode");
           $(".message-preview-cell").toggleClass("expanded");
         });
         

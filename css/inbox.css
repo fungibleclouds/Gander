@@ -67,7 +67,7 @@ a.folder-header:hover {
 
 .folders-button, .edit-button {
   display: block;
-  width: 54px;
+  width: 50px;
   height: 32px;
   background-color: white;
   border: 2px solid black;
@@ -92,7 +92,7 @@ a.folder-header:hover {
 .folders-button p, .edit-button p {
   position: absolute;
   top: 5px;
-  width: 54px;
+  width: 50px;
   text-align: center;
 }
 
@@ -156,7 +156,11 @@ table.message-list {
   position: relative;
 }
 
-.message .unread-marker {
+.message .check-box-cell.edit-mode {
+  width: 26px;
+}
+
+.check-box-cell .unread-marker {
   visibility: hidden;
   width: 30px;
   height: 85px;
@@ -164,7 +168,7 @@ table.message-list {
   background-color: #CCCCFF;
 }
 
-.message.unread .unread-marker {
+.message.unread .check-box-cell .unread-marker {
   visibility: visible;
 }
 
@@ -177,6 +181,32 @@ table.message-list {
   background-color: white;
   border: 2px solid black;
   border-radius: 4px;
+}
+
+.check-box-cell.edit-mode .message-check-box {
+  left: 6px;
+}
+
+.unread-marker-cell {
+  width: 20px;
+  height: auto;
+  position: relative;
+}
+
+.unread-marker-cell .unread-marker {
+  visibility: hidden;
+  position: absolute;
+  top: 36px;
+  width: 14px;
+  height: 20px;
+  margin-left: 3px;
+  background-image: url("../images/unread-icon.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+
+.message.unread .unread-marker-cell .unread-marker {
+  visibility: visible;
 }
 
 .message .message-check-box:hover {
@@ -195,10 +225,6 @@ a.message-link {
 
 .message .message-preview-cell {
   position: relative;
-}
-
-.message-preview-cell.expanded {
-  padding-left: 8px;
 }
 
 .message p {
