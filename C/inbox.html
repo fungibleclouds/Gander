@@ -332,14 +332,14 @@
         });
 
         $(".folder-header").click(function() {
-          $(".message-list-container").slideToggle();
+          $(".message-list-container").toggle();
           $(".folder-list-container").toggle();
           $(".arrow-icon").toggleClass("flipped");
           window.scrollTo(0, 0);
         });
 
         $(".folder").click(function() {
-          $(".message-list-container").slideToggle();
+          $(".message-list-container").toggle();
           $(".folder-list-container").toggle();
           $(".arrow-icon").toggleClass("flipped");
           $(".folder-header").html($(this).html());

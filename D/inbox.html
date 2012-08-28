@@ -34,9 +34,7 @@
         <table class='message-list'>
           <tr class='message unread'>
             <td class='check-box-cell hidden'>
-              <a class='check-box-clickable' href="#">
                 <div class="message-check-box"></div>
-              </a>
             </td>
             <td class='unread-marker-cell'>
                <div class="unread-marker"></div>
@@ -365,7 +363,7 @@
         });
 
         $(".folder-header").click(function() {
-          $(".message-list-container").slideToggle();
+          $(".message-list-container").toggle();
           $(".folder-list-container").toggle();
           $(".arrow-icon").toggleClass("flipped");
           if ($(".folders-button-label").html() == "folders") {
