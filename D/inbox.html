@@ -286,21 +286,24 @@
         });
         
         $(".message").click(function(event) {
-          $(this).find(".message-check-box").toggleClass("selected");
-          
-          if ($(this).find(".message-check-box").hasClass("selected")) {
-            numSelected++;
-          } else {
-            numSelected--;
+          if ($(this).hasClass("edit-mode")) {
+            $(this).find(".message-check-box").toggleClass("selected");
+            $(this).toggleClass("selected");
+            
+            if ($(this).find(".message-check-box").hasClass("selected")) {
+              numSelected++;
+            } else {
+              numSelected--;
+            }
+            
+            if (numSelected > 0) {
+              $(".button-ribbon").removeClass("hidden");
+              $(".scroll-up-button").addClass("hidden");
+            } else {
+              $(".button-ribbon").addClass("hidden");
+            }          
+            event.preventDefault();
           }
-          
-          if (numSelected > 0) {
-            $(".button-ribbon").removeClass("hidden");
-            $(".scroll-up-button").addClass("hidden");
-          } else {
-            $(".button-ribbon").addClass("hidden");
-          }          
-          event.preventDefault();
         });
         
         $(".cancel").click(function() {

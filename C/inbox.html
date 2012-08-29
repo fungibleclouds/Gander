@@ -258,10 +258,10 @@
           alert("Now you could view and update all your settings");
         });
         
-        $(".message-check-box").click(function() {
-          $(this).toggleClass("selected");
+        $("td.check-box-cell").click(function() {
+          $(this).find(".message-check-box").toggleClass("selected");
           
-          if ($(this).hasClass("selected")) {
+          if ($(this).find(".message-check-box").hasClass("selected")) {
             numSelected++;
           } else {
             numSelected--;

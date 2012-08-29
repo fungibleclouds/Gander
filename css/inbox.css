@@ -150,10 +150,9 @@ table.message-list {
   padding: 0;
 }
 
-.message-clickable.edit-mode {
-  width: 100%;
-  height: 85px;
-  position: absolute;
+.message.edit-mode.selected {
+  background-color: #EEF;
+  border: 2px solid #CCF;
 }
 
 .message .check-box-cell {
@@ -215,7 +214,7 @@ table.message-list {
   visibility: visible;
 }
 
-.message .message-check-box:hover {
+td.check-box-cell:hover {
   cursor: pointer;
 }
 
