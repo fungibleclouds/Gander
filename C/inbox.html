@@ -13,10 +13,8 @@
   <body onload="onLoadFunctions()">
 
     <div id='container'>
-    
-      <div class="header-container-spacer"><p>Tap here to restore buttons</p></div>
       
-      <div class="header-container fixable">
+      <div class="header-container">
         <h2 class="folder-header-wrapper"> 
           <span>
             <a class="folder-header" type="button" id="inbox-header">Inbox</a>
@@ -30,7 +28,6 @@
             <input class="search-field" type="text" placeholder="search all your messages and folders"/>
           </div>
         </div>
-        <div class="header-fix-toggle"></div>
       </div>
 
       <div class='message-list-container'>
@@ -321,26 +318,6 @@
           alert("Sorry, there aren't any more options yet.");
           $(".button-ribbon").addClass("hidden");
           numSelected = 0;
-        });
-
-        $(".header-fix-toggle").click(function() {
-          if ($(".header-container").css("top") == "0px") {
-            $(".header-container").animate({
-              "top": "-90" /* height of header-container without fix-toggle button */
-            });
-            $(".header-container").removeClass("fixed");
-          } else {
-            $(".header-container").animate({
-              "top": "0" 
-            });
-            $(".header-container").addClass("fixed");
-          }
-        });
-
-        $(".header-container-spacer").click(function() {
-          $(".header-container").animate({
-            "top": "0" 
-          });   
         });
 
         $(".folder-header").click(function() {

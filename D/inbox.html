@@ -307,7 +307,6 @@
         });
         
         $(".message-preview-cell a").click(function() {
-          $(this).parent().parent().removeClass("unread");
           var href = $(this).attr("href");
           var id = $(this).parent().parent().attr("id");
           $(this).attr("href", href + "?message_id=" + id);

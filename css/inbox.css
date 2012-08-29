@@ -6,36 +6,12 @@
   font-family: Arial, sans-serif;
 }
 
-.header-container-spacer {
-  position: relative;
-  background-color: #DDD;
-  height: 105px; /* height of header-container */
-}
-
-.header-container-spacer:hover {
-  cursor: pointer;
-}
-
-.header-container-spacer p {
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
-  position: absolute;
-  bottom: 25px;
-}
-
 .header-container {
   width: 100%;
   background-color: #DDD;
   padding-bottom: 0px;
   border-top: solid black 2px;
   border-bottom: solid black 2px;
-}
-
-.header-container.fixable {
-  position: fixed;
-  top: 0;
-  z-index: 1;
 }
 
 h2.folder-header-wrapper {
@@ -149,14 +125,6 @@ a.folder-header:hover {
   background-position: 5px 7px;
   background-image: url("../images/search-icon.png");
   background-repeat: no-repeat;
-}
-
-.header-container .header-fix-toggle {
-  width: auto;
-  height: 15px;
-  background-image: url("../images/doublearrow-icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .message-list-container {
