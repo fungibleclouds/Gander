@@ -341,15 +341,6 @@
           $(".header-container").animate({
             "top": "0" 
           });   
-          $(".header-contianer").addClass("fixed");       
-        });
-
-        $(window).scroll(function() {
-          if (window.pageYOffset < 1) {
-            $(".header-container.fixed").addClass("hidden");
-          } else {
-            $(".header-container.fixed").removeClass("hidden");
-          }
         });
 
         $(".folder-header").click(function() {
