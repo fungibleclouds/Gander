@@ -32,7 +32,7 @@
 
       <div class='message-list-container'>
         <table class='message-list'>
-          <tr class='message unread'>
+          <tr class='message unread' id='message1'>
             <td class='check-box-cell hidden'>
                 <div class="message-check-box"></div>
             </td>
@@ -49,7 +49,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message unread' id='message1'>
+          <tr class='message unread' id='message2'>
             <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
             </td>
@@ -66,7 +66,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message'>
+          <tr class='message' id='message3'>
             <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
             </td>
@@ -83,7 +83,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message unread'>
+          <tr class='message unread' id='message4'>
             <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
             </td>
@@ -100,7 +100,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message'>
+          <tr class='message' id='message5'>
             <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
             </td>
@@ -117,7 +117,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message'>
+          <tr class='message' id='message6'>
             <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
             </td>
@@ -134,7 +134,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message'>
+          <tr class='message' id='message7'>
             <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
             </td>
@@ -151,7 +151,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message'>
+          <tr class='message' id='message8'>
             <td class='check-box-cell hidden'>
               <div class="message-check-box"></div>
             </td>
@@ -306,6 +306,13 @@
           }
         });
         
+        $(".message-preview-cell a").click(function() {
+          $(this).parent().parent().removeClass("unread");
+          var href = $(this).attr("href");
+          var id = $(this).parent().parent().attr("id");
+          $(this).attr("href", href + "?message_id=" + id);
+        });
+        
         $(".cancel").click(function() {
           $(".message-check-box").removeClass("selected");
           $(".button-ribbon").addClass("hidden");
@@ -391,12 +398,35 @@
 
     <script type="text/javascript">
       function onLoadFunctions() {
+        setUnreadMessages();
         scrollToLogo();
       }
       
       function scrollToLogo() {
         document.getElementById("container").scrollIntoView();
       }
+
+      function setUnreadMessages() {
+        var qs = getQueryStrings();
+        var messageid = qs["message_id"];
+        document.getElementById(messageid).classList.remove("unread");
+      }
+      
+      function getQueryStrings() {
+        var assoc  = {};
+        var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+        var queryString = location.search.substring(1); 
+        var keyValues = queryString.split('&'); 
+
+        for(var i in keyValues) { 
+          var key = keyValues[i].split('=');
+          if (key.length > 1) {
+            assoc[decode(key[0])] = decode(key[1]);
+          }
+        } 
+
+        return assoc; 
+      } 
     </script>
    
   </body>

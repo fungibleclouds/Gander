@@ -14,6 +14,8 @@
 
     <div id='container'>
     
+      <div class="header-container-spacer"></div>
+      
       <div class="header-container">
         <h2 class="folder-header-wrapper"> 
           <span>
@@ -28,11 +30,12 @@
             <input class="search-field" type="text" placeholder="search all your messages and folders"/>
           </div>
         </div>
+        <div class="header-fix-toggle"></div>
       </div>
 
       <div class='message-list-container'>
         <table class='message-list'>
-          <tr class='message unread'>
+          <tr class='message unread' id='message1'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -47,7 +50,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message unread' id='message1'>
+          <tr class='message unread' id='message2'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -62,7 +65,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message'>
+          <tr class='message' id='message3'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -77,7 +80,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message unread'>
+          <tr class='message unread' id='message4'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -92,7 +95,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message'>
+          <tr class='message' id='message5'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -107,7 +110,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message'>
+          <tr class='message' id='message6'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -122,7 +125,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message'>
+          <tr class='message' id='message7'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -137,7 +140,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message'>
+          <tr class='message' id='message8'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -260,6 +263,7 @@
         
         $("td.check-box-cell").click(function() {
           $(this).find(".message-check-box").toggleClass("selected");
+          $(this).parent().toggleClass("selected");
           
           if ($(this).find(".message-check-box").hasClass("selected")) {
             numSelected++;
@@ -273,6 +277,13 @@
           } else {
             $(".button-ribbon").addClass("hidden");
           }
+        });
+              
+        $(".message-preview-cell a").click(function() {
+          $(this).parent().parent().removeClass("unread");
+          var href = $(this).attr("href");
+          var id = $(this).parent().parent().attr("id");
+          $(this).attr("href", href + "?message_id=" + id);
         });
         
         $(".cancel").click(function() {
@@ -321,6 +332,26 @@
           window.scrollTo(0, 0);
         });
 
+        $(".header-fix-toggle").click(function() {
+          if ($(".header-container").css("top") == "0px") {
+            $(".header-container").animate({
+              "top": "-=90" /* height of header-container without fix-toggle */
+            });
+          } else {
+            $(".header-container").animate({
+              "top": "+=90" /* height of header-container without fix-toggle */
+            });          
+          }
+        });
+
+        $(window).scroll(function() {
+          if (window.pageYOffset == 0) {
+            $(".header-container.fixed").addClass("hidden");
+          } else {
+            $(".header-container.fixed").removeClass("hidden");
+          }
+        });
+
         $(window).scroll(function() {
            if (window.pageYOffset == 0 ||
               $(window).scrollTop() + $(window).height() == $(document).height() ||
@@ -350,12 +381,35 @@
 
     <script type="text/javascript">
       function onLoadFunctions() {
+        setUnreadMessages();
         scrollToLogo();
       }
       
       function scrollToLogo() {
         document.getElementById("container").scrollIntoView();
       }
+
+      function setUnreadMessages() {
+        var qs = getQueryStrings();
+        var messageid = qs["message_id"];
+        document.getElementById(messageid).classList.remove("unread");
+      }
+      
+      function getQueryStrings() {
+        var assoc  = {};
+        var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+        var queryString = location.search.substring(1); 
+        var keyValues = queryString.split('&'); 
+
+        for(var i in keyValues) { 
+          var key = keyValues[i].split('=');
+          if (key.length > 1) {
+            assoc[decode(key[0])] = decode(key[1]);
+          }
+        } 
+
+        return assoc; 
+      } 
     </script>
    
   </body>

@@ -6,12 +6,20 @@
   font-family: Arial, sans-serif;
 }
 
+.header-container-spacer {
+  position: relative;
+  height: 105px; /* height of header-container */
+}
+
 .header-container {
   width: 100%;
   background-color: #DDD;
   padding-bottom: 0px;
   border-top: solid black 2px;
   border-bottom: solid black 2px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 h2.folder-header-wrapper {
@@ -127,6 +135,14 @@ a.folder-header:hover {
   background-repeat: no-repeat;
 }
 
+.header-container .header-fix-toggle {
+  width: auto;
+  height: 15px;
+  background-image: url("../images/doublearrow-icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .message-list-container {
   width: 100%;
   margin-left: auto;
@@ -141,6 +157,10 @@ table.message-list {
   background-color: white;
 }
 
+.header-fix-toggle:hover {
+  cursor: pointer;
+}
+
 .message {
   border-bottom: 1px solid #EEE;
   width: 100%;
@@ -150,9 +170,15 @@ table.message-list {
   padding: 0;
 }
 
+.message:hover {
+  cursor: pointer:
+}
+
+.message.selected
+
 .message.edit-mode.selected {
   background-color: #EEF;
-  border: 2px solid #CCF;
+  border-bottom: 1px solid #CCC; /* increases border contrast */
 }
 
 .message .check-box-cell {
@@ -214,10 +240,6 @@ table.message-list {
   visibility: visible;
 }
 
-td.check-box-cell:hover {
-  cursor: pointer;
-}
-
 .message .message-check-box.selected {
   background-position: -287px 0px;
   background-image: url("../images/glyphicons.png");
@@ -244,16 +266,20 @@ a.message-link {
 
 .message p.from {
   font-size: 1.3em;
-  font-weight: bold;
   float: left;
-  margin-top: 2px;
+  margin-top: -4px;
   margin-right: 30px;
+}
+
+.message.unread p.from {
+  font-weight: bold;
 }
 
 .message p.date {
   position: absolute;
-  top: 5px;
+  top: 6px;
   right: 12px;
+  color: #777;
 }
 
 .message p.subject {
