@@ -269,7 +269,6 @@
           
           if (numSelected > 0) {
             $(".button-ribbon").removeClass("hidden");
-            $(".scroll-up-button").addClass("hidden");
           } else {
             $(".button-ribbon").addClass("hidden");
           }
@@ -346,7 +345,7 @@
         });
 
         $(window).scroll(function() {
-          if (window.pageYOffset == 0) {
+          if (window.pageYOffset < 1) {
             $(".header-container.fixed").addClass("hidden");
           } else {
             $(".header-container.fixed").removeClass("hidden");
