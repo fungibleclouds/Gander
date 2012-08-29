@@ -14,7 +14,7 @@
 
     <div id='container'>
     
-      <div class="header-container-spacer"></div>
+      <div class="header-container-spacer"><p>Tap here to restore buttons</p></div>
       
       <div class="header-container">
         <h2 class="folder-header-wrapper"> 
@@ -224,10 +224,6 @@
         </ol>
       </div>
       
-      <div class="scroll-up-button hidden">
-        <div class="scroll-up-background"></div>
-      </div>
-      
       <div id='push'><!--//--></div>
       
     </div>
@@ -328,20 +324,25 @@
           numSelected = 0;
         });
 
-        $(".scroll-up-button").click(function() {
-          window.scrollTo(0, 0);
-        });
-
         $(".header-fix-toggle").click(function() {
           if ($(".header-container").css("top") == "0px") {
             $(".header-container").animate({
-              "top": "-=90" /* height of header-container without fix-toggle */
+              "top": "-90" /* height of header-container without fix-toggle button */
             });
+            $(".header-container").removeClass("fixed");
           } else {
             $(".header-container").animate({
-              "top": "+=90" /* height of header-container without fix-toggle */
-            });          
+              "top": "0" 
+            });
+            $(".header-container").addClass("fixed");
           }
+        });
+
+        $(".header-container-spacer").click(function() {
+          $(".header-container").animate({
+            "top": "0" 
+          });   
+          $(".header-contianer").addClass("fixed");       
         });
 
         $(window).scroll(function() {
@@ -349,16 +350,6 @@
             $(".header-container.fixed").addClass("hidden");
           } else {
             $(".header-container.fixed").removeClass("hidden");
-          }
-        });
-
-        $(window).scroll(function() {
-           if (window.pageYOffset == 0 ||
-              $(window).scrollTop() + $(window).height() == $(document).height() ||
-              numSelected > 0) {
-            $(".scroll-up-button").addClass("hidden");
-           } else {
-            $(".scroll-up-button").removeClass("hidden");
           }
         });
 

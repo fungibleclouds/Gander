@@ -8,7 +8,20 @@
 
 .header-container-spacer {
   position: relative;
+  background-color: #DDD;
   height: 105px; /* height of header-container */
+}
+
+.header-container-spacer:hover {
+  cursor: pointer;
+}
+
+.header-container-spacer p {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  position: absolute;
+  bottom: 25px;
 }
 
 .header-container {
