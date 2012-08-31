@@ -237,15 +237,19 @@
     <script type="text/javascript">
       $(document).ready(function() {
         var numSelected = 0;
-        var window_width = $(window).width()-49;
+        var window_width = $(window).width();
+        var button_width = (window_width-8)/5;
         
-        $(".search-field").width(window_width);
+        $(".search-field").width(window_width-49);
+        $(".button-list li").width(button_width);
+        $(".button-list .icon").css("right", (button_width/2)-8);
         
         $(window).resize(function() {
-          window_width = $(window).width()-49;
-          $(".search-field").width(window_width); 
+          var window_width = $(window).width();
+          var button_width = (window_width-8)/5;
+          $(".button-list li").width(button_width);
+          $(".button-list .icon").css("right", (button_width/2)-8);
         });
-        
         $(".sync-button").click(function() {
           alert("Syncing all messages and folders...");
         });
