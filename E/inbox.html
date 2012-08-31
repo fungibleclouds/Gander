@@ -5,34 +5,31 @@
     <title>Gander - Messages</title>
     <link href='http://fonts.googleapis.com/css?family=Lato|Courgette' rel='stylesheet' type='text/css' />
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="../css/inbox.css" rel="stylesheet" type="text/css" />
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../css/inbox.css" rel="stylesheet" type="text/css" />
+    <link href="../css/search.css" rel="stylesheet" type="text/css" />
     <script src="../scripts/jquery-1.7.2.min.js"></script>
   </head>
 
   <body onload="onLoadFunctions()">
 
     <div id='container'>
+      <header>
+        <div class="logo">gander</div>
+        <div class="header-left-button">LEFT</div>
+        <div class="header-right-button">RIGHT</div>
+      </header>
       
-      <div class="header-container">
-        <h2 class="folder-header-wrapper"> 
-          <span>
-            <a class="folder-header" type="button" id="inbox-header">Inbox</a>
-            <div class="arrow-icon"></div>
-          </span>
-        </h2>
-        <div class="sync-button"></div>
-        <div class="settings-button"></div>
-        <div class="button-ribbon-top">
-          <div class="search-field-cell">
-            <input class="search-field" type="text" placeholder="search all your messages and folders"/>
-          </div>
+      <div class="search-field-wrapper">
+        <input class="search-field" id="main-search" type="text"/>
+        <div class="search-button">
+          <div class="search-icon"></div>
         </div>
       </div>
-
+          
       <div class='message-list-container'>
         <table class='message-list'>
-          <tr class='message unread' id='message1'>
+          <tr class='message unread gander' id='message1'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -47,7 +44,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message unread' id='message2'>
+          <tr class='message unread gander' id='message2'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -211,44 +208,8 @@
         </div>
       </div>
       
-      <div class="folder-list-container">
-        <ol class="folder-list" style="">
-          <li><span class="folder">Inbox</span></li>
-          <li><span class="folder">Sent Items</span></li>
-          <li><span class="folder">Drafts</span></li>
-          <li><span class="folder">Deleted Items</span></li>
-          <li><span class="folder">Priority</span>
-          <li><span class="folder">Travel</span>
-            <ol>
-              <li><span class="folder">Flight Tickets</span></li>
-              <li><span class="folder">Resort Coupons</span></li>
-            </ol>
-          </li>
-          <li><span class="folder">Business</span>
-            <ol>
-              <li><span class="folder">Meeting Notes</span></li>
-              <li><span class="folder">Customer Feedback</span></li>
-              <li><span class="folder">Archive</span></li>
-            </ol>
-          </li>
-          <li><span class="folder">Spam</span></li>
-          <li><span class="folder">Reports</span></li>
-          <li><span class="folder">Training</span>
-            <ol>
-              <li><span class="folder">Attendance</span>
-                <ol>
-                  <li><span class="folder">Week #1</span></li>
-                  <li><span class="folder">Week #2</span></li>
-                  <li><span class="folder">Week #3</span></li>
-                </ol>
-              </li>
-              <li><span class="folder">Assignment</span></li>
-              <li><span class="folder">Final Project</span></li>
-            </ol> 
-          </li>
-          <li><span class="folder">Misc</span></li>
-          <li><span class="folder">Objectives</span></li>          
-        </ol>
+      <div class="scroll-up-button hidden">
+        <div class="scroll-up-background"></div>
       </div>
       
       <div id='push'><!--//--></div>
@@ -270,24 +231,22 @@
         var window_width = $(window).width();
         var button_width = (window_width-8)/5;
         
-        $(".search-field").width(window_width-49);
+        var searchWidth = function() {
+          var window_width = $(window).width();
+          var search_width = window_width - 76 - 30;
+          return (search_width < 350) ? search_width : 350;
+        }
+        
+        $(".search-field").width(searchWidth());
         $(".button-list li").width(button_width);
         $(".button-list .icon").css("right", (button_width/2)-8);
         
         $(window).resize(function() {
           var window_width = $(window).width();
           var button_width = (window_width-8)/5;
-          $(".search-field").width(window_width-49);
+          $(".search-field").width(searchWidth());
           $(".button-list li").width(button_width);
           $(".button-list .icon").css("right", (button_width/2)-8);
-        });
-        
-        $(".sync-button").click(function() {
-          alert("Syncing all messages and folders...");
-        });
-        
-        $(".settings-button").click(function() {
-          alert("Now you could view and update all your settings");
         });
         
         $("td.check-box-cell").click(function() {
@@ -302,6 +261,7 @@
           
           if (numSelected > 0) {
             $(".button-ribbon").removeClass("hidden");
+            $(".scroll-up-button").addClass("hidden");
           } else {
             $(".button-ribbon").addClass("hidden");
           }
@@ -311,7 +271,7 @@
           $(this).parent().parent().removeClass("unread");
           var href = $(this).attr("href");
           var id = $(this).parent().parent().attr("id");
-          $(this).attr("href", href + "?message_id=" + id);
+          $(this).attr("href", href + "?" + id + "=unread");
         });
         
         $(".cancel").click(function() {
@@ -375,6 +335,32 @@
           $(".folder-header").html($(this).html());
           window.scrollTo(0, 0);
         });
+        
+        $(".search-button").click(function() {
+          $(".message-list-container").slideUp().delay(1000);
+          $(".message").addClass("hidden");
+          if ($(".search-field").val() == "gander") {
+            $(".message.gander").removeClass("hidden");            
+          } else if ($(".search-field").val() == "") {
+            $(".message").removeClass("hidden");
+          }
+          $(".message-list-container").slideDown();
+        });
+
+        $(".scroll-up-button").click(function() {
+          $('html,body').animate({scrollTop:0}, "fast");    
+          /* window.scrollTo(0, 0); use this for iPhones--less jerky */
+        });
+        
+        $(window).scroll(function() {
+           if (window.pageYOffset == 0 ||
+              $(window).scrollTop() + $(window).height() == $(document).height() ||
+              numSelected > 0) {
+            $(".scroll-up-button").addClass("hidden");
+           } else {
+            $(".scroll-up-button").removeClass("hidden");
+          }
+        });
       });
     </script>
 
@@ -390,8 +376,13 @@
 
       function setUnreadMessages() {
         var qs = getQueryStrings();
-        var messageid = qs["message_id"];
-        document.getElementById(messageid).classList.remove("unread");
+        for (var i = 1; i <= 10; i++) {
+          if (qs["message" + i] == "unread") {
+            document.getElementById("message" + i).classList.remove("unread");
+          } else if (qs["message" + i] == "read") {
+            document.getElementById("message" + i).classList.add("unread");
+          }
+        }
       }
       
       function getQueryStrings() {

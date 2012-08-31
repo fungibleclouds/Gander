@@ -2,7 +2,7 @@
 <html>
   <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
-    <title>Gander - Sign In</title>
+    <title>Gander - Messages</title>
     <link href='http://fonts.googleapis.com/css?family=Lato|Courgette' rel='stylesheet' type='text/css' />
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../css/inbox.css" rel="stylesheet" type="text/css" />
@@ -307,8 +307,8 @@
         });
         
         $(".folders-button").click(function() {
-          $(".message-list-container").toggle();
-          $(".folder-list-container").toggle();
+          $(".message-list-container").slideToggle(); /* use toggle() instead for iPhones--less jerky */
+          $(".folder-list-container").slideToggle(); /* use toggle() instead for iPhones--less jerky */
           $(".arrow-icon").toggleClass("flipped");
           if ($(".folders-button-label").html() == "folders") {
             $(".folders-button-label").html("back");
@@ -370,7 +370,7 @@
           $(".message-check-box").each(function() {
             if ($(this).hasClass("selected")) {
               $(this).removeClass("selected");
-              $(this).parent().parent().remove();            
+              $(this).parent().parent().scrollUp("slow");            
             }
           });
           $(".button-ribbon").addClass("hidden");
@@ -403,7 +403,8 @@
         });
 
         $(".scroll-up-button").click(function() {
-          window.scrollTo(0, 0);
+          $('html,body').animate({scrollTop:0}, "fast");    
+          /* window.scrollTo(0, 0); use this for iPhones--less jerky */
         });
 
         $(window).scroll(function() {
@@ -417,8 +418,8 @@
         });
 
         $(".folder-header").click(function() {
-          $(".message-list-container").toggle();
-          $(".folder-list-container").toggle();
+          $(".message-list-container").slideToggle(); /* use toggle() instead for iPhones--less jerky */
+          $(".folder-list-container").slideToggle(); /* use toggle() instead for iPhones--less jerky */
           $(".arrow-icon").toggleClass("flipped");
           if ($(".folders-button-label").html() == "folders") {
             $(".folders-button-label").html("back");
@@ -429,8 +430,8 @@
         });
 
         $(".folder").click(function() {
-          $(".message-list-container").toggle();
-          $(".folder-list-container").toggle();
+          $(".message-list-container").slideToggle(); /* use toggle() instead for iPhones--less jerky */
+          $(".folder-list-container").slideToggle(); /* use toggle() instead for iPhones--less jerky */
           $(".arrow-icon").toggleClass("flipped");
           $(".folder-header").html($(this).html());
           if ($(".folders-button-label").html() == "folders") {
@@ -455,8 +456,11 @@
 
       function setUnreadMessages() {
         var qs = getQueryStrings();
-        var messageid = qs["message_id"];
-        document.getElementById(messageid).classList.remove("unread");
+        for (var i = 1; i <= 10; i++) {
+          if (qs["message_id" + i == "unread"]) {
+            document.getElementById("message_id" + i).classList.remove("unread");
+          }
+        }
       }
       
       function getQueryStrings() {
