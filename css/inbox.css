@@ -164,7 +164,7 @@ table.message-list {
 }
 
 .message .check-box-cell {
-  width: 46px;
+  width: 36px;
   padding: 0;
   position: relative;
 }
@@ -175,9 +175,8 @@ table.message-list {
 
 .check-box-cell .unread-marker {
   visibility: hidden;
-  width: 30px;
+  width: 32px;
   height: 85px;
-  margin-left: 8px;
   background-color: #CCCCFF;
 }
 
@@ -188,7 +187,7 @@ table.message-list {
 .message .message-check-box {
   position: absolute;
   top: 32px;
-  left: 13px;
+  left: 6px;
   width: 16px;
   height: 16px;
   background-color: white;
@@ -197,7 +196,7 @@ table.message-list {
 }
 
 .check-box-cell.edit-mode .message-check-box {
-  left: 6px;
+  /*left: 6px;*/
 }
 
 .unread-marker-cell {
