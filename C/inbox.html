@@ -247,6 +247,7 @@
         $(window).resize(function() {
           var window_width = $(window).width();
           var button_width = (window_width-8)/5;
+          $(".search-field").width(window_width-49);
           $(".button-list li").width(button_width);
           $(".button-list .icon").css("right", (button_width/2)-8);
         });
