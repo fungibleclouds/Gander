@@ -2,7 +2,7 @@ header {
   position: relative;
   padding-left: 0;
   padding-right: 0;
-  height: 2em;
+  height: 2.5em;
   width: 100%;
   background-color: #333;
   text-align: center;
@@ -10,7 +10,7 @@ header {
 
 header .header-left-button {
   position: absolute;
-  top: 5px;
+  top: 8px;
   left: 8px;
   color: white;
   background-repeat: no-repeat; 
@@ -29,11 +29,16 @@ header .logo {
   font-size: 1.4em;
   font-weight: bold;
   color: #CCC;
+  background-repeat: no-repeat; 
+  background-position: 0px -3px;
+  background-image: url("../images/gander-icon.png");  
+  width: 100px;
+  height: 30px;
 }
 
 header .header-right-button {
   position: absolute;
-  top: 5px;
+  top: 8px;
   right: 8px;
   margin: 0px;
   color: white;
