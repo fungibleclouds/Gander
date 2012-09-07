@@ -21,7 +21,7 @@
       </header>
       
       <div class="search-field-wrapper">
-        <input class="search-field" id="main-search" type="text"/>
+        <input class="search-field" id="main-search" type="text" placeholder='search all your messages'/>
         <div class="search-button">
           <div class="search-icon"></div>
         </div>
@@ -29,7 +29,7 @@
           
       <div class='message-list-container'>
         <table class='message-list'>
-          <tr class='message unread gander' id='message1'>
+          <tr class='message unread gander hidden' id='message1'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -44,7 +44,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message gander' id='message3'>
+          <tr class='message gander hidden' id='message2'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -59,7 +59,52 @@
               </a>
             </td>
           </tr>
-          <tr class='message unread tamar' id='message4'>
+          <tr class='message hidden' id='message3'>
+            <td class='check-box-cell'>
+              <div class="unread-marker"></div>
+              <div class="message-check-box"></div>
+            </td>
+            <td class='message-preview-cell'>
+              <a href="success-message.html" class="message-link">
+                <p class='from'>friend@gmail.com</p>
+                <p class='date'>March 12</p>
+                <p class='subject'>Wanna grab lunch?</p>
+                <p class='content'>I heard there is a new sushi restaurant in Watertown Square. Their ratings are sky-high. Are you free at 12:30pm? We can walk to the Green Line then get off at Kenmore Square. </p>
+                <div class="right-arrow"></div>
+              </a>
+            </td>
+          </tr>
+          <tr class='message unread hidden' id='message4'>
+            <td class='check-box-cell'>
+              <div class="unread-marker"></div>
+              <div class="message-check-box"></div>
+            </td>
+            <td class='message-preview-cell'>
+              <a href="success-message.html" class="message-link">
+                <p class='from'>no-reply@ecards.com</p>
+                <p class='date'>4/18/11</p>
+                <p class='subject'>Happy birthday!</p>
+                <p class='content'>Click below to open your birthday e-card from your brother. Best wishes for a great day! Want to automate birthday cards for all your friends and family? You'll never have to remember anyone's birthday again!</p>
+                <div class="right-arrow"></div>
+              </a>
+            </td>
+          </tr>
+          <tr class='message hidden' id='message5'>
+            <td class='check-box-cell'>
+              <div class="unread-marker"></div>
+              <div class="message-check-box"></div>
+            </td>
+            <td class='message-preview-cell'>
+              <a href="success-message.html" class="message-link">
+                <p class='from'>Gander</p>
+                <p class='date'>Yesterday</p>
+                <p class='subject'>Gander is the bomb.</p>
+                <p class='content'>Check out everything Gander can do. Scroll down and click the features tab, or browse our blog. Reading the Privacy Policy can be pretty exciting, too.</p>
+                <div class="right-arrow"></div>
+              </a>
+            </td>
+          </tr>
+          <tr class='message unread tamar hidden' id='message6'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -69,12 +114,12 @@
                 <p class='from'>tamarr@ripariandata.com</p>
                 <p class='date'>March 12</p>
                 <p class='subject'>And the Snapple fact is...</p>
-                <p class='content'>A star?! That's the Snapple fact? I've gone online to claim my price, and I can tell you it's all a scam. </p>
+                <p class='content'>A star? That's the Snapple fact?! I've gone online to claim my price, and let me tell you, it's a scam. </p>
                 <div class="right-arrow"></div>
               </a>
             </td>
           </tr>
-          <tr class='message scott' id='message5'>
+          <tr class='message unread scott hidden' id='message7'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -82,14 +127,14 @@
             <td class='message-preview-cell'>
               <a href="success-message.html" class="message-link">
                 <p class='from'>scottd@ripariandata.com</p>
-                <p class='date'>4/18/11</p>
+                <p class='date'>6:30am</p>
                 <p class='subject'>Blog post #731</p>
                 <p class='content'>Dried mission figs are a bit smaller and sweeter than the Calimyrna variety. These also have a slight pinkish hue in the middle. See http://nuts.com/driedfruit/figs/mission.html.</p>
                 <div class="right-arrow"></div>
               </a>
             </td>
           </tr>
-          <tr class='message sean' id='message6'>
+          <tr class='message unread sean hidden' id='message8'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -99,12 +144,12 @@
                 <p class='from'>seank@ripariandata.com</p>
                 <p class='date'>3/2/10</p>
                 <p class='subject'>Orchid - Build #849 - Fixed!</p>
-                <p class='content'>Alaskan snowmobilers apply duct tape to their faces to keep them from freezing during the Iron Dog 2200 mile race. The Apollo 13 crew used duct tape in 1970 to retrofit square carbon dioxide filters into round lunar moule receptacles, which saved three astronauts' lives.</p>
+                <p class='content'>Alaskan snowmobilers apply duct tape to their faces to keep them from freezing during the Iron Dog 2200 mile race. The Apollo 13 crew used duct tape in 1970 to retrofit square carbon dioxide filters into round lunar module receptacles, which saved three astronauts' lives.</p>
                 <div class="right-arrow"></div>
               </a>
             </td>
           </tr>
-          <tr class='message ramon' id='message8'>
+          <tr class='message unread ramon hidden' id='message9'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -119,7 +164,7 @@
               </a>
             </td>
           </tr>
-          <tr class='message' id='message9'>
+          <tr class='message unread david hidden' id='message10'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
@@ -128,23 +173,68 @@
               <a href="success-message.html" class="message-link">
                 <p class='from'>wihl@ripariandata.com</p>
                 <p class='date'>3/2/10</p>
-                <p class='subject'>Gander is the bomb.</p>
-                <p class='content'>Initial press releases suggest Gander will modernize the way we think of email for years to come. Studies show the average businessman spends upwards of 3 hours every day sifting through messages.</p>
+                <p class='subject'>Gander as a metaphor for life</p>
+                <p class='content'>"When life gives you an orchid, let it blossom."</p>
                 <div class="right-arrow"></div>
               </a>
             </td>
           </tr>
-          <tr class='message' id='message10'>
+          <tr class='message unread mike hidden' id='message11'>
             <td class='check-box-cell'>
               <div class="unread-marker"></div>
               <div class="message-check-box"></div>
             </td>
             <td class='message-preview-cell'>
               <a href="success-message.html" class="message-link">
-                <p class='from'>Gander</p>
-                <p class='date'>3/2/10</p>
-                <p class='subject'>Gander is the bomb.</p>
-                <p class='content'>Initial press releases suggest Gander will modernize the way we think of email for years to come. Studies show the average businessman spends upwards of 3 hours every day sifting through messages.</p>
+                <p class='from'>michaelf@ripariandata.com</p>
+                <p class='date'>3:12pm</p>
+                <p class='subject'>Quality Assured.</p>
+                <p class='content'>I ran through some manual tests, and looks like we've eliminated just about every bug. Good work team! </p>
+                <div class="right-arrow"></div>
+              </a>
+            </td>
+          </tr>
+          <tr class='message unread nick hidden' id='message11'>
+            <td class='check-box-cell'>
+              <div class="unread-marker"></div>
+              <div class="message-check-box"></div>
+            </td>
+            <td class='message-preview-cell'>
+              <a href="success-message.html" class="message-link">
+                <p class='from'>nickm@ripariandata.com</p>
+                <p class='date'>4:11pm</p>
+                <p class='subject'>Quality Assured.</p>
+                <p class='content'>I ran through some manual tests, and looks like we've eliminated just about every bug. Good work team! </p>
+                <div class="right-arrow"></div>
+              </a>
+            </td>
+          </tr>
+          <tr class='message unread christina hidden' id='message11'>
+            <td class='check-box-cell'>
+              <div class="unread-marker"></div>
+              <div class="message-check-box"></div>
+            </td>
+            <td class='message-preview-cell'>
+              <a href="success-message.html" class="message-link">
+                <p class='from'>christinan@ripariandata.com</p>
+                <p class='date'>9:11pm</p>
+                <p class='subject'>Quality Assured.</p>
+                <p class='content'>I ran through some manual tests, and looks like we've eliminated just about every bug. Good work team! </p>
+                <div class="right-arrow"></div>
+              </a>
+            </td>
+          </tr>
+          <tr class='message unread jim hidden' id='message11'>
+            <td class='check-box-cell'>
+              <div class="unread-marker"></div>
+              <div class="message-check-box"></div>
+            </td>
+            <td class='message-preview-cell'>
+              <a href="success-message.html" class="message-link">
+                <p class='from'>jims@ripariandata.com</p>
+                <p class='date'>3:12pm</p>
+                <p class='subject'>Quality Assured.</p>
+                <p class='content'>I ran through some manual tests, and looks like we've eliminated just about every bug. Good work team! </p>
                 <div class="right-arrow"></div>
               </a>
             </td>
@@ -293,14 +383,13 @@
 
         
         $(".search-button").click(function() {
-          $(".message-list-container").slideUp().delay(1000);
           $(".message").addClass("hidden");
-          if ($(".search-field").val() == "gander") {
-            $(".message.gander").removeClass("hidden");            
-          } else if ($(".search-field").val() == "") {
+          var search = $(".search-field").val();
+          if (search == "") {
             $(".message").removeClass("hidden");
-          }
-          $(".message-list-container").slideDown();
+          } else {
+            $(".message." + search).removeClass("hidden");            
+          } 
         });
 
         $(".scroll-up-button").click(function() {
