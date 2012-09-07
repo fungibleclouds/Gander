@@ -112,7 +112,7 @@
             <td class='message-preview-cell'>
               <a href="success-message.html" class="message-link">
                 <p class='from'>tamarr@ripariandata.com</p>
-                <p class='date'>March 12</p>
+                <p class='date'>September 2</p>
                 <p class='subject'>And the Snapple fact is...</p>
                 <p class='content'>A star? That's the Snapple fact?! I've gone online to claim my price, and let me tell you, it's a scam. </p>
                 <div class="right-arrow"></div>
@@ -203,8 +203,8 @@
               <a href="success-message.html" class="message-link">
                 <p class='from'>nickm@ripariandata.com</p>
                 <p class='date'>4:11pm</p>
-                <p class='subject'>Quality Assured.</p>
-                <p class='content'>I ran through some manual tests, and looks like we've eliminated just about every bug. Good work team! </p>
+                <p class='subject'>HTTP party!</p>
+                <p class='content'>Well this is kind of like partying...</p>
                 <div class="right-arrow"></div>
               </a>
             </td>
@@ -218,8 +218,8 @@
               <a href="success-message.html" class="message-link">
                 <p class='from'>christinan@ripariandata.com</p>
                 <p class='date'>9:11pm</p>
-                <p class='subject'>Quality Assured.</p>
-                <p class='content'>I ran through some manual tests, and looks like we've eliminated just about every bug. Good work team! </p>
+                <p class='subject'>here are the mock-ups :)</p>
+                <p class='content'>I added some dancing ganders in the background to spice things up. they should liven the user interface and make the UX really crisp. Hope you like them! </p>
                 <div class="right-arrow"></div>
               </a>
             </td>
@@ -233,8 +233,8 @@
               <a href="success-message.html" class="message-link">
                 <p class='from'>jims@ripariandata.com</p>
                 <p class='date'>3:12pm</p>
-                <p class='subject'>Quality Assured.</p>
-                <p class='content'>I ran through some manual tests, and looks like we've eliminated just about every bug. Good work team! </p>
+                <p class='subject'>iPod synced and ready to go</p>
+                <p class='content'>The iPod OS couldn't be updated at work, so I took it home and spent the night doing it for you. Should be working 100%.</p>
                 <div class="right-arrow"></div>
               </a>
             </td>
@@ -385,7 +385,7 @@
         $(".search-button").click(function() {
           $(".message").addClass("hidden");
           var search = $(".search-field").val();
-          if (search == "") {
+          if (search == "" || search == "all" || search == "everything" || search == "show me da money") {
             $(".message").removeClass("hidden");
           } else {
             $(".message." + search).removeClass("hidden");            
