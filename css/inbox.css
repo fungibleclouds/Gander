@@ -32,12 +32,12 @@ a.folder-header:hover {
 }
 
 .folder-header-wrapper .arrow-icon {
-  background-repeat: no-repeat; 
   margin-left: auto;
   margin-right: auto;
   margin-top: -10px;
   width: 16px;
   height: 16px;
+  background-repeat: no-repeat; 
   background-position: -311px -118px;
   background-image: url("../images/glyphicons.png");   
 }
